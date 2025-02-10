@@ -5,11 +5,11 @@
 ---
 ### QR code component challenge on Frontend Mentor.
 
-![|100](./qr-code/qr-code-final-product.jpg )
+<img src="./qr-code/qr-code-final-product.jpg" style="width:500px">
 
 ---
 
 ### Blog preview card challenge on Frontend Mentor
 
-![|100](./blog-preview-card/blog-preview-card-final-product.jpg)
+<img src="./blog-preview-card/blog-preview-card-final-product.jpg" style="width:500px">
 
