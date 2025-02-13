@@ -13,7 +13,7 @@
   box-sizing: border-box;
   font-size: 16px;
   font-family: "Outfit", serif;
-  color: var(--stone-900);
+  color: var(--stone-600);
 }
 
 :root {
@@ -28,8 +28,6 @@
 
   --rose-800: hsl(332, 51%, 32%);
   --rose-50: hsl(330, 100%, 98%);
-
-  --default-font-size: 16px;
 }
 
 .background {
@@ -45,9 +43,9 @@
 
 .container {
   background-color: var(--white);
-  width: 730px;
-  margin: 15px;
-  padding: 35px;
+  max-width: 730px;
+  margin: 35px;
+  padding: 40px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -108,7 +106,8 @@ li {
   color: var(--brown-800);
 }
 
-.ingredients li, .instructions li {
+.ingredients li,
+.instructions li {
   margin-left: 25px;
 }
 
@@ -127,22 +126,29 @@ li {
 }
 
 .nutrition p {
-    margin: 15px 0;
+  margin: 15px 0;
 }
 
-.nutrition table{
-    margin-top: 15px;
-    width: 100%;
+.nutrition table {
+  margin-top: 15px;
+  width: 100%;
 }
 
 .nutrition td {
-    border-bottom: var(--stone-150) solid 1px;    
-    width: 50%;
-    padding: 15px 30px;    
+  border-bottom: var(--stone-150) solid 1px;
+  width: 50%;
 }
 
-.nutri-val{
-    color: var(--brown-800);
+.nutrition td:first-child {
+  padding: 15px 30px;
+}
+
+.nutrition tr:last-child td {
+  border-bottom: none;
+}
+
+.nutri-val {
+  color: var(--brown-800);
 }
 
 footer {
@@ -156,5 +162,6 @@ footer {
 }
 
 .attribution a {
+  font-size: inherit;
   color: hsl(228, 45%, 44%);
 }
