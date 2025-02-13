@@ -17,4 +17,4 @@
 
 ### Social links profile challenge on Frontend Mentor
 
-<img src="./social-links-profile/social-links-profile-final-product.jpg" style="width:300px">
+<img src="./social-links-profile/social-links-profile-final-product.jpg" style="width:500px">
