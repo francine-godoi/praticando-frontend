@@ -29,4 +29,4 @@
 
 ### Product preview card component challenge on Frontend Mentor
 
-<img src="./product-preview-card-component/product-preview-card-component-final-product.jpg" style="width:500px">
+<img src="./product-preview-card-component/product-preview-card-component-final-product.jpg" style="width:1000px">
