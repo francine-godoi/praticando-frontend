@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 14px;
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+  color: var(--grey);
 }
 
 :root {
@@ -15,7 +18,116 @@
   --grey: hsl(228, 12%, 48%);
   --cream: hsl(30, 38%, 92%);
   --white: hsl(0, 0%, 100%);
+}
 
+.background {
+  background-color: var(--cream);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  position: relative;
+}
+
+.container {
+  max-width: 600px;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 300px;
+  min-width: 100%;
+  min-height: 100%;
+  left: 0;
+  display: block;
+}
+
+.product-image .img-mobile{
+  display: none;
+}
+
+.product-info {
+  width: 100%;
+  min-height: 100%;
+  right: 0;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 35px;
+}
+
+.product-category {
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.product-info h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  color: var(--black);
+}
+
+.product-description {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 160%;
+}
+
+.product-description .chanel {
+  letter-spacing: 0.6px;
+}
+
+.product-prices {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.product-prices .highlight {
+  color: var(--green-500);
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.product-prices .strikethrough {
+  text-decoration: line-through;
+}
+
+.add-to-cart-btn {
+  background-color: var(--green-500);
+  color: var(--white);
+  padding: 15px 0;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.add-to-cart-btn img {
+  margin-right: 10px;
+  width: 14px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--green-700);
+  cursor: pointer;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
 }
 
 .attribution {
@@ -24,5 +136,32 @@
 }
 
 .attribution a {
+  font-size: 11px;
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 625px) {
+
+  .background{
+    padding: 5px;
+  }
+
+  .container{
+    flex-direction: column;
+    width: 350px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+
+  .product-image .img-mobile{
+    display: block;
+  }
+
+  .product-image .img-desktop{
+    display: none;
+  }
+
+  .product-info{
+    padding: 20px;
+  }
 }
