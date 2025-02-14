@@ -23,4 +23,4 @@
 
 ### Recipe page challenge on Frontend Mentor
 
-<img src="./recepe-page/recipe-page-final-product.jpg" style="width:500px">
+<img src="./recipe-page/recipe-page-final-product.jpg" style="width:500px">
