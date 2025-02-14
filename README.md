@@ -24,3 +24,9 @@
 ### Recipe page challenge on Frontend Mentor
 
 <img src="./recipe-page/recipe-page-final-product.jpg" style="width:500px">
+
+---
+
+### Product preview card component challenge on Frontend Mentor
+
+<img src="./product-preview-card-component/product-preview-card-component-final-product.jpg" style="width:500px">
