@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  color: var(--grey-400);
+}
+
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  --grey-500: hsl(234, 12%, 34%);
+  --grey-400: hsl(212, 6%, 44%);
+  --white: hsl(0, 0%, 100%);
+}
+
+main {
+  position: relative;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  margin: 10px;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 50px;
+}
+
+.intro {
+  width: 500px;
+}
+
+h1 {
+  font-weight: 200;
+  line-height: 130%;
+  margin-bottom: 15px;
+}
+
+h1,
+.highlight {
+  font-size: 32px;
+}
+
+.highlight,
+h2 {
+  font-weight: 600;
+  color: var(--grey-500);
+}
+
+.cards {
+  margin: 10px;
+}
+
+.cards,
+.middle {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.middle {
+  flex-direction: column;
+}
+
+.card {
+  width: 350px;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 15px;
+  border-radius: 5px;
+  background-color: var(--white);
+  font-weight: 200;
+  box-shadow: 0 25px 50px -12px #3b82f620;
+}
+
+.description {
+  text-align: start;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 13px;
+}
+
+img {
+  max-width: 60px;
+}
+
+.card-img {
+  margin-top: 10px;
+  display: flex;
+  justify-content: end;
+}
+
+.supervisor {
+  border-top: 4px solid var(--cyan);
+}
+
+.team-builder {
+  border-top: 4px solid var(--red);
+}
+
+.karma {
+  border-top: 4px solid var(--orange);
+}
+
+.calculator {
+  border-top: 4px solid var(--blue);
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  font-size: inherit;
+}
+
+@media (max-width: 1125px) {
+  .cards {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  .intro {
+    max-width: 275px;
+  }
+  
+  h1,
+  .highlight {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .card {
+    width: 275px;
+    height: 230px;
+    padding: 25px;
+    gap: 15px;    
+  }
+
+  .container {
+    gap: 30px;
+    padding: 5px;
+  }
+
+}
