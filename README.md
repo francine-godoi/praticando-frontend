@@ -37,4 +37,9 @@
 
 <img src="./four-card-feature-section/four-card-feature-section-final-product.jpg" >
 
+---
+
+### Testimonials grid section challenge on Frontend Mentor
+
+<img src="./testimonials-grid-section/testimonials-grid-section-final-product.jpg" >
 
