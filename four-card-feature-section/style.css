@@ -154,7 +154,7 @@ footer {
   .intro {
     max-width: 275px;
   }
-  
+
   h1,
   .highlight {
     font-size: 22px;
@@ -166,9 +166,9 @@ footer {
 
   .card {
     width: 275px;
-    height: 230px;
+    height: 200px;
     padding: 25px;
-    gap: 15px;    
+    gap: 15px;
   }
 
   .container {
@@ -176,4 +176,11 @@ footer {
     padding: 5px;
   }
 
+  img {
+    max-width: 45px;
+  }
+
+  .card-img {
+    margin-top: 5px;
+  }
 }
