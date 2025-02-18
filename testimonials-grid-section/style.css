@@ -30,7 +30,7 @@ main {
   justify-content: center;
 }
 
-.grid-container {
+.container {
   display: grid;
   grid-template-columns: repeat(4, 250px);
   grid-template-rows: repeat(2, auto);
@@ -166,25 +166,10 @@ footer {
 }
 
 @media (max-width: 1110px) {
-  .grid-container {
-    grid-template-columns: 300px;
-    grid-template-rows: repeat(5, auto);
-  }
-
-  .testimonial {
-    grid-column: 1;
-  }
-
-  .jonathan {
-    grid-row-start: 2;
-  }
-
-  .jeanette {
-    grid-row-start: 3;
-  }
-
-  .patrick {
-    grid-row-start: 4;
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
   }
 
   .quote-icon img {
