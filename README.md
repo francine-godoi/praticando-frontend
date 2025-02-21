@@ -43,3 +43,8 @@
 
 <img src="./testimonials-grid-section/testimonials-grid-section-final-product.jpg" >
 
+---
+
+### Article preview component challenge on Frontend Mentor
+
+<img src="./article-preview-component/article-preview-component-final-product.jpg" >
