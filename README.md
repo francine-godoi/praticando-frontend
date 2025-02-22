@@ -1,6 +1,6 @@
-# Projetos HTML + CSS
+# Projetos HTML + CSS + JS
 
- Coleção de projetos utilizando HTML e CSS para práticar
+ Coleção de projetos utilizando HTML, CSS e JS para práticar
 
 ---
 ### QR code component challenge on Frontend Mentor.
