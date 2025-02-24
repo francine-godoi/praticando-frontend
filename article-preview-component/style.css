@@ -17,7 +17,7 @@
 
 body {
   background-color: var(--light-grayish-blue);
-  height: 97vh;
+  min-height: 97vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,12 +30,14 @@ body {
   display: flex;
   border-radius: 10px;
   overflow: hidden;
+  margin: 10px;
 }
 
 .image img {
   width: 400px;
   z-index: 0;
   position: relative;
+  height: 100%;
 }
 
 .info {
@@ -44,6 +46,7 @@ body {
   z-index: 1;
   position: relative;
   background-color: white;
+  border-radius: 0 10px 10px 0;
 }
 
 .info h1 {
@@ -91,25 +94,28 @@ body {
   margin: 0;
 }
 
-.share {
+.share .arrow-div {
   display: flex;
   align-items: center;
   padding: 6px;
   border-radius: 50%;
   background-color: var(--light-grayish-blue);
   margin-right: 10px;
+  position: relative;
+  z-index: 3;
 }
 
-.share .icon {
+.share .arrow-div .icon {
   font-size: 18px;
   position: relative;
+  z-index: 3;
 }
 
-.share-active{
-  background-color: var(--desaturated-dark-blue);
+.share-active {
+  background-color: var(--desaturated-dark-blue) !important;
 }
 
-.share-active .icon{
+.share-active .icon {
   fill: white;
 }
 
@@ -165,4 +171,67 @@ footer {
 .attribution a {
   color: hsl(228, 45%, 44%);
   font-size: 11px;
+}
+
+@media (max-width: 865px) {
+  .container {
+    flex-direction: column;
+    width: 350px;
+    padding: 7px;
+  }
+
+  .image img {
+    width: 100%;
+    z-index: 0;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .info {
+    padding: 20px 40px;
+    transform: translateX(0) translateY(-45px);
+    border-radius: 0 0 10px 10px;
+  }
+
+  .info h1 {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  .lower-part {
+    margin-top: 30px;
+  }
+
+  .profile img {
+    width: 40px;
+    border-radius: 50%;
+  }
+
+  .profile .data h3 {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--very-dark-grayish-blue);
+  }
+
+  .profile .data p {
+    font-size: 13px;
+    margin: 0;
+  }
+
+  .share .share-icons-show {
+    justify-content: start;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 0 0 10px 10px;
+    left: 0px;
+    bottom: 0px;
+  }
+
+  .share .share-icons:after {
+    border-top: solid 12px transparent;
+  }
+
+  .info p {
+    margin-bottom: 0px;
+  }
 }

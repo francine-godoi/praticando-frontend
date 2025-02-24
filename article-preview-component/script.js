@@ -1,6 +1,6 @@
 function showShareBtn(){
     let shareIcons = document.getElementsByClassName('share-icons')
-    let arrowIcon = document.getElementsByClassName('share')
+    let arrowIcon = document.getElementsByClassName('arrow-div')
 
     if (arrowIcon[0].classList.contains('share-active')){
         shareIcons[0].classList.remove('share-icons-show')    
