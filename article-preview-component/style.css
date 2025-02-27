@@ -103,6 +103,7 @@ body {
   margin-right: 10px;
   position: relative;
   z-index: 3;
+  cursor: pointer;
 }
 
 .share .arrow-div .icon {

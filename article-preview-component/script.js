@@ -10,3 +10,4 @@ function showShareBtn(){
         arrowIcon[0].classList.add('share-active')
     }
 }
+
