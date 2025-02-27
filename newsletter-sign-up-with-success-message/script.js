@@ -1,19 +1,32 @@
-let contSubscribe = document.getElementsByClassName('container-subscribe')
-let contSucess = document.getElementsByClassName('container-sucess')
+let contSubscribe = document.getElementsByClassName("container-subscribe");
+let contSucess = document.getElementsByClassName("container-sucess");
+let email = document.getElementsByName("email");
+let userEmail = document.getElementById("user-email");
+let erro = document.getElementById("error");
 
-
-function submitForm(event){
-    event.preventDefault();
-    contSubscribe[0].style.display= 'none'
-    contSucess[0].style.display='block'
+function validateEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
 }
 
-function dismissMessage(){
-    contSubscribe[0].style.display= 'flex'
-    contSucess[0].style.display='none'
+function submitForm(event) {
+  event.preventDefault();
+
+  if (!email[0].value || !validateEmail(email[0].value)) {
+    erro.textContent = "Valid email required";
+    email[0].classList.add("input-error");
+  } else {
+    contSubscribe[0].style.display = "none";
+    contSucess[0].style.display = "block";
+    userEmail.textContent = email[0].value;
+  }
 }
 
-// TODO: validar email e adicionar mensagem de erro
-// TODO: alinhar marcadores da lista
-// TODO: versão mobile
-// TODO: versão ativa
+function dismissMessage() {
+  contSubscribe[0].style.display = "flex";
+  contSucess[0].style.display = "none";
+  erro.textContent = "";
+  email[0].classList.remove("input-error");
+  email[0].value = "";
+  userEmail.textContent = "";
+}

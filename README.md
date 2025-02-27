@@ -48,3 +48,9 @@
 ### Article preview component challenge on Frontend Mentor
 
 <img src="./article-preview-component/article-preview-component-final-product.jpg" >
+
+---
+
+### Newsletter sign-up form with success message challenge on Frontend Mentor
+
+<img src="./newsletter-sign-up-with-success-message/newsletter-sign-up-with-success-message-final-product.jpg" >
