@@ -1,0 +1,219 @@
+:root {
+  --blue: hsl(246, 80%, 60%);
+
+  --light-red-work: hsl(15, 100%, 70%);
+  --soft-blue-play: hsl(195, 74%, 62%);
+  --light-red-study: hsl(348, 100%, 68%);
+  --lime-green-exercise: hsl(145, 58%, 55%);
+  --violet-social: hsl(264, 64%, 52%);
+  --soft-orange-self-care: hsl(43, 84%, 65%);
+
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--pale-blue);
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  min-height: 98vh;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 225px);
+  grid-gap: 25px;
+  row-gap: 30px;  
+  margin-bottom: 20px;
+}
+
+.nav {
+  grid-row: span 2 / span 2;
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+}
+
+.profile {
+  background-color: var(--blue);
+  border-radius: 10px;
+  padding: 35px;
+}
+
+.profile img {
+  width: 65px;
+  border-radius: 50%;
+  border: white 2px solid;
+  margin-bottom: 30px;
+}
+
+.profile p {
+  font-size: 14px;
+}
+
+.profile h1 {
+  font-size: 32px;
+  color: white;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px;
+  gap: 15px;
+  
+}
+
+.filter p {
+  color: var(--desaturated-blue);
+}
+
+.filter p:hover{
+    cursor: pointer;
+    color: white;
+}
+
+.card {
+  position: relative;
+}
+
+.card .icon {
+  height: 100%;
+  padding-right: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: end;
+  position: relative;
+  overflow: hidden;
+}
+
+.card .work-card{
+    background-color: var(--light-red-work);
+}
+
+.card .play-card{
+    background-color: var(--soft-blue-play);
+}
+
+.card .study-card{
+    background-color: var(--light-red-study);
+}
+
+.card .exercise-card{
+    background-color: var(--lime-green-exercise);
+}
+
+.card .social-card{
+    background-color: var(--violet-social);
+}
+
+.card .self-care-card{
+    background-color: var(--soft-orange-self-care);
+}
+
+.card .icon img{
+    position: absolute;
+    width: 70px;
+}
+
+.card .work-card img, .card .self-care-card img{
+    top: -10px;
+}
+
+.card .play-card img{
+    top: -5px;
+}
+
+.card .study-card img{
+    top: -7px;
+}
+
+.card .exercise-card img{
+    top: -2px;
+}
+
+.card .social-card img{
+    top: -14px;
+}
+
+.card .self-care-card img{
+    width: 60px;
+}
+
+.card .details {
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+  width: 100%;
+  padding: 25px;
+  position: absolute;
+  top: 40px;
+}
+
+.card .details:hover{
+    cursor: pointer;
+    background-color: var(--desaturated-blue);
+}
+
+
+.card .details .daily-hours,
+.card .details .monthly-hours {
+  display: none;
+}
+
+.card .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .title img{
+    height: 5px;
+}
+
+.card .title img:hover{
+    cursor: pointer;
+}
+
+.card .details h3 {
+  font-weight: 400;
+  color: white;
+}
+
+.card .details .hours {
+  font-size: 48px;
+  font-weight: 300;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.card .details .previous {
+  font-size: 14px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  font-size: 11px;
+}
