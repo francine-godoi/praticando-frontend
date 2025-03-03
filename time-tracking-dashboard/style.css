@@ -28,18 +28,17 @@ body {
   background-color: var(--very-dark-blue);
   min-height: 98vh;
   min-width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 30px;
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 225px);
-  grid-gap: 25px;
+  display: grid;  
+  max-width: 980px;
+  grid-template-columns: repeat(auto-fill,225px);
+  grid-auto-rows: 212.5px;
+  column-gap: 25px;
   row-gap: 30px;  
-  margin-bottom: 20px;
+  margin: auto;
 }
 
 .nav {
@@ -95,7 +94,7 @@ body {
 }
 
 .card .icon {
-  height: 100%;
+  height: 55px;
   padding-right: 10px;
   border-radius: 10px;
   display: flex;
@@ -206,6 +205,10 @@ body {
 
 .card .details .previous {
   font-size: 14px;
+}
+
+footer{
+  margin-top: 30px;
 }
 
 .attribution {
