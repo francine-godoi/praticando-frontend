@@ -54,3 +54,9 @@
 ### Newsletter sign-up form with success message challenge on Frontend Mentor
 
 <img src="./newsletter-sign-up-with-success-message/newsletter-sign-up-with-success-message-final-product.jpg" >
+
+---
+
+### Time tracking dashboard challenge on Frontend Mentor
+
+<img src="./time-tracking-dashboard/time-tracking-dashboard-final-product.jpg" >

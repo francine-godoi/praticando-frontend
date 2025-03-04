@@ -33,7 +33,7 @@ body {
 
 .grid-container {
   display: grid;
-  max-width: 980px;  
+  max-width: 980px;
   grid-template-columns: repeat(auto-fill, 225px);
   grid-auto-rows: 212.5px;
   column-gap: 25px;
@@ -86,6 +86,10 @@ body {
 .filter p:hover {
   cursor: pointer;
   color: white;
+}
+
+.active-filter {
+  color: white !important;
 }
 
 .card {
@@ -170,11 +174,6 @@ body {
   background-color: var(--desaturated-blue);
 }
 
-.card .details .daily-hours,
-.card .details .monthly-hours {
-  display: none;
-}
-
 .card .title {
   display: flex;
   justify-content: space-between;
@@ -221,7 +220,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-
   body {
     padding: 5px;
   }
@@ -237,10 +235,9 @@ footer {
   }
 
   .nav {
-    grid-row:  1;
+    grid-row: 1;
     width: 350px;
     height: 200px;
-
   }
 
   .profile {
@@ -277,7 +274,6 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
 
   .card .details .hours {

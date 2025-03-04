@@ -35,9 +35,11 @@
         </div>
 
         <div class="filter">
-          <p id="daily">Daily</p>
-          <p id="weekly">Weekly</p>
-          <p id="monthly">Monthly</p>
+          <p id="daily" onclick="filter(event)">Daily</p>
+          <p id="weekly" class="active-filter" onclick="filter(event)">
+            Weekly
+          </p>
+          <p id="monthly" onclick="filter(event)">Monthly</p>
         </div>
       </div>
 
@@ -50,21 +52,10 @@
             <h3>Work</h3>
             <img src="images/icon-ellipsis.svg" alt="icon ellipsis" />
           </div>
-
-          <p class="hours daily-hours">5hrs</p>
-          <!-- daily -->
-          <p class="previous daily-hours">Previous - 7hrs</p>
-          <!-- daily -->
-          <div class="time">
-            <p class="hours weekly-hours">32hrs</p>
-            <!-- weekly -->
-            <p class="previous weekly-hours">Previous - 36hrs</p>
-            <!-- weekly -->
+          <div class="time" id="work">
+            <p class="hours">32hrs</p>
+            <p class="previous">Last Week - 36hrs</p>
           </div>
-          <p class="hours monthly-hours">103hrs</p>
-          <!-- monthly -->
-          <p class="previous monthly-hours">Previous - 128hrs</p>
-          <!-- monthly -->
         </div>
       </div>
 
@@ -77,20 +68,10 @@
             <h3>Play</h3>
             <img src="images/icon-ellipsis.svg" alt="icon ellipsis" />
           </div>
-          <p class="hours daily-hours">1hr</p>
-          <!-- daily -->
-          <p class="previous daily-hours">Previous - 2hrs</p>
-          <!-- daily -->
-          <div class="time">
-            <p class="hours weekly-hours">10hrs</p>
-            <!-- weekly -->
-            <p class="previous weekly-hours">Previous - 8hrs</p>
-            <!-- weekly -->
+          <div class="time" id="play">
+            <p class="hours">10hrs</p>
+            <p class="previous">Last Week - 8hrs</p>
           </div>
-          <p class="hours monthly-hours">23hrs</p>
-          <!-- monthly -->
-          <p class="previous monthly-hours">Previous - 29hrs</p>
-          <!-- monthly -->
         </div>
       </div>
 
@@ -103,20 +84,10 @@
             <h3>Study</h3>
             <img src="images/icon-ellipsis.svg" alt="icon ellipsis" />
           </div>
-          <p class="hours daily-hours">0hrs</p>
-          <!-- daily -->
-          <p class="previous daily-hours">Previous - 1hr</p>
-          <!-- daily -->
-          <div class="time">
-            <p class="hours weekly-hours">4hrs</p>
-            <!-- weekly -->
-            <p class="previous weekly-hours">Previous - 7hrs</p>
-            <!-- weekly -->
+          <div class="time" id="study">
+            <p class="hours">4hrs</p>
+            <p class="previous">Last Week - 7hrs</p>
           </div>
-          <p class="hours monthly-hours">13hrs</p>
-          <!-- monthly -->
-          <p class="previous monthly-hours">Previous - 19hrs</p>
-          <!-- monthly -->
         </div>
       </div>
 
@@ -129,20 +100,10 @@
             <h3>Exercise</h3>
             <img src="images/icon-ellipsis.svg" alt="icon ellipsis" />
           </div>
-          <p class="hours daily-hours">1hr</p>
-          <!-- daily -->
-          <p class="previous daily-hours">Previous - 1hr</p>
-          <!-- daily -->
-          <div class="time">
-            <p class="hours weekly-hours">4hrs</p>
-            <!-- weekly -->
-            <p class="previous weekly-hours">Previous - 5hrs</p>
-            <!-- weekly -->
+          <div class="time" id="exercise">
+            <p class="hours">4hrs</p>
+            <p class="previous">Last Week - 5hrs</p>
           </div>
-          <p class="hours monthly-hours">11hrs</p>
-          <!-- monthly -->
-          <p class="previous monthly-hours">Previous - 18hrs</p>
-          <!-- monthly -->
         </div>
       </div>
 
@@ -155,20 +116,10 @@
             <h3>Social</h3>
             <img src="images/icon-ellipsis.svg" alt="icon ellipsis" />
           </div>
-          <p class="hours daily-hours">1hr</p>
-          <!-- daily -->
-          <p class="previous daily-hours">Previous - 3hrs</p>
-          <!-- daily -->
-          <div class="time">
-            <p class="hours weekly-hours">5hrs</p>
-            <!-- weekly -->
-            <p class="previous weekly-hours">Previous - 10hrs</p>
-            <!-- weekly -->
+          <div class="time" id="social">
+            <p class="hours">5hrs</p>
+            <p class="previous">Last Week - 10hrs</p>
           </div>
-          <p class="hours monthly-hours">21hrs</p>
-          <!-- monthly -->
-          <p class="previous monthly-hours">Previous - 23hrs</p>
-          <!-- monthly -->
         </div>
       </div>
 
@@ -181,20 +132,10 @@
             <h3>Self Care</h3>
             <img src="images/icon-ellipsis.svg" alt="icon ellipsis" />
           </div>
-          <p class="hours daily-hours">0hrs</p>
-          <!-- daily -->
-          <p class="previous daily-hours">Previous - 1hr</p>
-          <!-- daily -->
-          <div class="time">
-            <p class="hours weekly-hours">2hrs</p>
-            <!-- weekly -->
-            <p class="previous weekly-hours">Previous - 2hrs</p>
-            <!-- weekly -->
+          <div class="time" id="self care">
+            <p class="hours">2hrs</p>
+            <p class="previous">Last Week - 2hrs</p>
           </div>
-          <p class="hours monthly-hours">7hrs</p>
-          <!-- monthly -->
-          <p class="previous monthly-hours">Previous - 11hrs</p>
-          <!-- monthly -->
         </div>
       </div>
     </div>
@@ -204,7 +145,7 @@
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. Coded by <a href="#">Francine G</a>.
       </div>
     </footer>
 
