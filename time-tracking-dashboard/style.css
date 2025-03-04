@@ -32,13 +32,13 @@ body {
 }
 
 .grid-container {
-  display: grid;  
-  max-width: 980px;
-  grid-template-columns: repeat(auto-fill,225px);
+  display: grid;
+  max-width: 980px;  
+  grid-template-columns: repeat(auto-fill, 225px);
   grid-auto-rows: 212.5px;
   column-gap: 25px;
-  row-gap: 30px;  
-  margin: auto;
+  row-gap: 30px;
+  margin: 0 auto;
 }
 
 .nav {
@@ -77,16 +77,15 @@ body {
   justify-content: center;
   padding: 25px;
   gap: 15px;
-  
 }
 
 .filter p {
   color: var(--desaturated-blue);
 }
 
-.filter p:hover{
-    cursor: pointer;
-    color: white;
+.filter p:hover {
+  cursor: pointer;
+  color: white;
 }
 
 .card {
@@ -103,57 +102,58 @@ body {
   overflow: hidden;
 }
 
-.card .work-card{
-    background-color: var(--light-red-work);
+.card .work-card {
+  background-color: var(--light-red-work);
 }
 
-.card .play-card{
-    background-color: var(--soft-blue-play);
+.card .play-card {
+  background-color: var(--soft-blue-play);
 }
 
-.card .study-card{
-    background-color: var(--light-red-study);
+.card .study-card {
+  background-color: var(--light-red-study);
 }
 
-.card .exercise-card{
-    background-color: var(--lime-green-exercise);
+.card .exercise-card {
+  background-color: var(--lime-green-exercise);
 }
 
-.card .social-card{
-    background-color: var(--violet-social);
+.card .social-card {
+  background-color: var(--violet-social);
 }
 
-.card .self-care-card{
-    background-color: var(--soft-orange-self-care);
+.card .self-care-card {
+  background-color: var(--soft-orange-self-care);
 }
 
-.card .icon img{
-    position: absolute;
-    width: 70px;
+.card .icon img {
+  position: absolute;
+  width: 70px;
 }
 
-.card .work-card img, .card .self-care-card img{
-    top: -10px;
+.card .work-card img,
+.card .self-care-card img {
+  top: -10px;
 }
 
-.card .play-card img{
-    top: -5px;
+.card .play-card img {
+  top: -5px;
 }
 
-.card .study-card img{
-    top: -7px;
+.card .study-card img {
+  top: -7px;
 }
 
-.card .exercise-card img{
-    top: -2px;
+.card .exercise-card img {
+  top: -2px;
 }
 
-.card .social-card img{
-    top: -14px;
+.card .social-card img {
+  top: -14px;
 }
 
-.card .self-care-card img{
-    width: 60px;
+.card .self-care-card img {
+  width: 60px;
 }
 
 .card .details {
@@ -165,29 +165,28 @@ body {
   top: 40px;
 }
 
-.card .details:hover{
-    cursor: pointer;
-    background-color: var(--desaturated-blue);
+.card .details:hover {
+  cursor: pointer;
+  background-color: var(--desaturated-blue);
 }
-
 
 .card .details .daily-hours,
 .card .details .monthly-hours {
   display: none;
 }
 
-.card .title{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.card .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.card .title img{
-    height: 5px;
+.card .title img {
+  height: 5px;
 }
 
-.card .title img:hover{
-    cursor: pointer;
+.card .title img:hover {
+  cursor: pointer;
 }
 
 .card .details h3 {
@@ -207,7 +206,7 @@ body {
   font-size: 14px;
 }
 
-footer{
+footer {
   margin-top: 30px;
 }
 
@@ -219,4 +218,71 @@ footer{
 .attribution a {
   color: hsl(228, 45%, 44%);
   font-size: 11px;
+}
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 5px;
+  }
+
+  .grid-container {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 225px;
+    grid-auto-rows: auto;
+    row-gap: 25px;
+  }
+
+  .nav {
+    grid-row:  1;
+    width: 350px;
+    height: 200px;
+
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+
+  .profile .name {
+    margin-left: 15px;
+  }
+
+  .profile img {
+    margin-bottom: 0;
+  }
+
+  .profile h1 {
+    font-size: 28px;
+    margin-bottom: 0;
+  }
+
+  .filter {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+    gap: 50px;
+  }
+
+  .card {
+    width: 350px;
+    height: 155px;
+  }
+
+  .card .details .time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .card .details .hours {
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
 }
