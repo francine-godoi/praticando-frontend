@@ -1,14 +1,14 @@
 function filter(event) {
-  const filterOptions = ["daily", "weekly", "monthly"];
+  const filterOptions = document.getElementsByClassName("filter")[0].children;
   const elemId = event.target.id;
 
-  filterOptions.forEach((value) => {
-    if (value === elemId) {
-      document.getElementById(value).classList.add("active-filter");
+  for (let option of filterOptions) {
+    if (option.id === elemId) {
+      document.getElementById(option.id).classList.add("active-filter");
     } else {
-      document.getElementById(value).classList.remove("active-filter");
+      document.getElementById(option.id).classList.remove("active-filter");
     }
-  });
+  }
 
   fetch("data.json")
     .then((response) => response.json())
