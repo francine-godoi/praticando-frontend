@@ -35,7 +35,7 @@
 
 ### Product preview card component challenge on Frontend Mentor
 
-<img src="./four-card-feature-section/four-card-feature-section-final-product.jpg" >
+<img src="./four-card-feature-section/four-card-feature-section-final-product.jpg"  style="width:800px" >
 
 ---
 
@@ -59,4 +59,4 @@
 
 ### Time tracking dashboard challenge on Frontend Mentor
 
-<img src="./time-tracking-dashboard/time-tracking-dashboard-final-product.jpg" >
+<img src="./time-tracking-dashboard/time-tracking-dashboard-final-product.jpg"  style="width:800px" >
