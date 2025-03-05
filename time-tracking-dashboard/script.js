@@ -25,19 +25,19 @@ function filter(chosenFilter) {
 
         parentElem.children[0].textContent = `${current}hrs`;
 
-        let previousHours = "";
+        let lastTimeFrame = "";
         switch (chosenFilter) {
           case "daily":
-            previousHours = `Yesterday - ${previous}hrs`;
+            lastTimeFrame = `Yesterday - `;
             break;
           case "weekly":
-            previousHours = `Last Week - ${previous}hrs`;
+            lastTimeFrame = `Last Week - `;
             break;
           case "monthly":
-            previousHours = `Last Month - ${previous}hrs`;
+            lastTimeFrame = `Last Month - `;
             break;
         }
-        parentElem.children[1].textContent = previousHours;
+        parentElem.children[1].textContent = lastTimeFrame + previous + "hrs";
       })
     );
   /* ---------------------------------------------------------------- */
