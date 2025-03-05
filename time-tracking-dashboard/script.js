@@ -23,7 +23,7 @@ function filter(chosenFilter) {
         const { current, previous } = value.timeframes[chosenFilter];
         const parentElem = document.getElementById(title);
 
-        parentElem.firstChild.textContent = `${current}hrs`;
+        parentElem.children[0].textContent = `${current}hrs`;
 
         let previousHours = "";
         switch (chosenFilter) {
@@ -37,7 +37,7 @@ function filter(chosenFilter) {
             previousHours = `Last Month - ${previous}hrs`;
             break;
         }
-        parentElem.lastChild.textContent = previousHours;
+        parentElem.children[1].textContent = previousHours;
       })
     );
   /* ---------------------------------------------------------------- */
