@@ -1,36 +1,44 @@
-function filter(event) {
-  const filterOptions = document.getElementsByClassName("filter")[0].children;
-  const elemId = event.target.id;
+/* default filter on page load */
+document.addEventListener("DOMContentLoaded", () => filter("weekly"));
 
-  for (let option of filterOptions) {
-    if (option.id === elemId) {
-      document.getElementById(option.id).classList.add("active-filter");
+function filter(chosenFilter) {
+  /* add or remove the active effect on the filter options menu */
+  const filterOptions = document.getElementById("filters").children;
+
+  for (let optionElem of filterOptions) {
+    if (optionElem.id === chosenFilter) {
+      optionElem.classList.add("active-filter");
     } else {
-      document.getElementById(option.id).classList.remove("active-filter");
+      optionElem.classList.remove("active-filter");
     }
   }
+  /* ---------------------------------------------------------------- */
 
+  /* populate HTML with data from json based on filter chosen */
   fetch("data.json")
     .then((response) => response.json())
     .then((values) =>
       values.forEach((value) => {
-        const title = value.title;
-        const { current, previous } = value.timeframes[elemId];
-        const parentElem = document.getElementById(title.toLowerCase());
+        const title = value.title.toLowerCase();
+        const { current, previous } = value.timeframes[chosenFilter];
+        const parentElem = document.getElementById(title);
 
-        parentElem.children[0].textContent = `${current}hrs`;
+        parentElem.firstChild.textContent = `${current}hrs`;
 
-        switch (elemId) {
+        let previousHours = "";
+        switch (chosenFilter) {
           case "daily":
-            parentElem.children[1].textContent = `Yesterday - ${previous}hrs`;
+            previousHours = `Yesterday - ${previous}hrs`;
             break;
           case "weekly":
-            parentElem.children[1].textContent = `Last Week - ${previous}hrs`;
+            previousHours = `Last Week - ${previous}hrs`;
             break;
           case "monthly":
-            parentElem.children[1].textContent = `Last Month - ${previous}hrs`;
+            previousHours = `Last Month - ${previous}hrs`;
             break;
         }
+        parentElem.lastChild.textContent = previousHours;
       })
     );
+  /* ---------------------------------------------------------------- */
 }
