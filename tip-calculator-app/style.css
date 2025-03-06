@@ -1,0 +1,77 @@
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--dark-grayish-cyan);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  color: var(--very-dark-cyan)!important;  
+}
+
+.tip-options {
+  width: 455px;
+}
+
+.tip-options label {
+  display: inline-block;
+  width: 120px;
+  padding: 5px 10px;
+  margin: 5px 0;
+  background-color: var(--very-dark-cyan);
+  color: var(--white);
+  text-align: center;
+  border-radius: 5px;
+}
+
+.tip-options #custom {
+  border: none;
+  width: 120px;
+  padding: 5px 10px;
+  text-align: center;
+  background-color: var(--very-light-grayish-cyan);
+  color: var(--dark-grayish-cyan);
+}
+
+
+.tip-options input[type="radio"] {
+  display: none;
+}
+
+.tip-options input[type="radio"]:checked + label {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  font-size: 11px;
+  color: hsl(228, 45%, 44%);
+}
