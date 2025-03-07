@@ -7,6 +7,7 @@
   --light-grayish-cyan: hsl(185, 41%, 84%);
   --very-light-grayish-cyan: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
+  --error:hsl(7, 42%, 62%);
 }
 
 * {
@@ -26,36 +27,83 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-  color: var(--very-dark-cyan)!important;  
+body {
+  height: 100dvh;
+  background-color: var(--light-grayish-cyan);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  padding: 30px;
+  background-color: var(--white);
+  border-radius: 20px;
+}
+
+.calculator {
+  width: 395px;
+}
+
+.calculator {
+  margin: 5px 10px 15px;
+}
+
+label:not(.tip-options label) {
+  font-size: 16px;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox no spin btn */
+
+  background-color: var(--very-light-grayish-cyan) !important;
+  color: var(--very-dark-cyan) !important;
+  text-align: right;
+  border: none;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: var(--grayish-cyan);
+}
+
+input:hover{  
+  cursor: pointer;
+  border: var(--strong-cyan) solid 2px;
+
+}
+
+input[type=number]:focus {
+  outline: none;
+}
+
+#bill {
+  margin-top: 5px;
+  margin-bottom: 30px;
+  padding: 5px 15px;
+  width: 100%;
+  background: url(images/icon-dollar.svg) no-repeat 20px 15px;
 }
 
 .tip-options {
-  width: 455px;
+  width: 100%;
+  margin-bottom: 25px;
+  margin-top: 5px;
 }
 
 .tip-options label {
   display: inline-block;
   width: 120px;
   padding: 5px 10px;
-  margin: 5px 0;
+  margin: 7.5px 0;
   background-color: var(--very-dark-cyan);
-  color: var(--white);
+  color: var(--very-light-grayish-cyan);
   text-align: center;
   border-radius: 5px;
 }
-
-.tip-options #custom {
-  border: none;
-  width: 120px;
-  padding: 5px 10px;
-  text-align: center;
-  background-color: var(--very-light-grayish-cyan);
-  color: var(--dark-grayish-cyan);
-}
-
 
 .tip-options input[type="radio"] {
   display: none;
@@ -64,6 +112,105 @@ input[type=number] {
 .tip-options input[type="radio"]:checked + label {
   background-color: var(--strong-cyan);
   color: var(--very-dark-cyan);
+}
+
+.tip-options label:hover{
+  color: var(--very-dark-cyan);
+  background-color: rgba(from var(--strong-cyan) r g b / 0.4);
+   cursor: pointer;
+}
+
+.tip-options #custom {
+  width: 120px;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.tip-options #custom::placeholder {
+  color: var(--dark-grayish-cyan);
+}
+
+#num-people {
+  margin-top: 5px;
+  padding: 5px 15px;
+  width: 100%;
+  background: url(images/icon-person.svg) no-repeat 20px 15px;
+}
+
+.num-people-msg{
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-msg{
+  color: var(--error);
+  font-size: 16px;
+}
+
+.error{
+  border: var(--error) solid 2px;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--very-dark-cyan);
+  width: 430px;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.tip-amount,
+.total-tips {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tip-amount {
+  margin-bottom: 25px;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 18px;
+  color: var(--very-light-grayish-cyan);
+}
+
+.subtitle {
+  font-size: 14px;
+}
+
+.total {
+  color: var(--strong-cyan);
+  font-size: 48px;
+}
+
+button {
+  background-color: var(--strong-cyan);
+  text-transform: uppercase;
+  font-size: 20x;
+  padding: 7.5px;
+  border: none;
+  border-radius: 5px;  
+}
+
+button:enabled {
+  color: var(--very-dark-cyan);
+}
+
+button:disabled {
+  opacity: 0.3;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: hsl( from var(--strong-cyan) h s 75%);
 }
 
 .attribution {

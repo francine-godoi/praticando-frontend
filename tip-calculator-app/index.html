@@ -15,14 +15,15 @@
 </head>
 <body>
 
+  <img src="images/logo.svg" alt="logo">
   <div class="container">
     <form action="">
       <div class="calculator">
-        <label for="bill">Bill</label>
-        <input type="number" id="bill">
+        <label for="bill">Bill</label><br>
+        <input type="number" id="bill" placeholder="0" autocomplete="off">
 
         <label for="tip-options">Select Tip %</label>
-        <div class="tip-options" name="tip-options">
+        <div class="tip-options" id="tip-options">
           <input type="radio" id="five" name="tip" value="5%">
           <label for="five">5%</label>
           <input type="radio" id="ten" name="tip" value="10%">
@@ -33,20 +34,35 @@
           <label for="twenty-five">25%</label>
           <input type="radio" id="fifty" name="tip" value="50%">
           <label for="fifty">50%</label>
-          <input type="number" id="custom" placeholder="Custom">
+          <input type="number" id="custom" placeholder="Custom" autocomplete="off">
         </div>
 
-        <label for="num-people">Number of People</label>
-        <input type="number" id="num-people">
+        <div class="num-people-msg">
+          <label for="num-people">Number of People</label>
+          <p class="error-msg"></p>
+        </div>
+        <input type="number" id="num-people" placeholder="0" autocomplete="off">
       </div>
     </form>
 
     <div class="results">
-      <p>Tip Amount</p>
-      <p>/ person</p>
-      <p>Total</p>
-      <p>/ person</p>
-      <button onclick="reset()">Reset</button>
+      <div class="info">
+        <div class="tip-amount">
+          <div class="titles">
+            <p class="title">Tip Amount</p>
+            <p class="subtitle">/ person</p>
+          </div>
+          <p class="total" id="tip-amount-value">$0.00</p>
+        </div>
+        <div class="total-tips">
+          <div class="titles">
+            <p class="title">Total</p>
+            <p class="subtitle">/ person</p>
+          </div>
+          <p class="total" id="total-value">$0.00</p>
+        </div>
+      </div>
+      <button disabled onclick="reset()">Reset</button>
     </div>
   </div>
   
