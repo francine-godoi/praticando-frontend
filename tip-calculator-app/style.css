@@ -7,7 +7,7 @@
   --light-grayish-cyan: hsl(185, 41%, 84%);
   --very-light-grayish-cyan: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
-  --error:hsl(7, 42%, 62%);
+  --error: hsl(7, 42%, 62%);
 }
 
 * {
@@ -62,7 +62,7 @@ input[type="number"] {
   background-color: var(--very-light-grayish-cyan) !important;
   color: var(--very-dark-cyan) !important;
   text-align: right;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 5px;
 }
 
@@ -70,13 +70,12 @@ input::placeholder {
   color: var(--grayish-cyan);
 }
 
-input:hover{  
+input:hover {
   cursor: pointer;
   border: var(--strong-cyan) solid 2px;
-
 }
 
-input[type=number]:focus {
+input[type="number"]:focus {
   outline: none;
 }
 
@@ -114,10 +113,10 @@ input[type=number]:focus {
   color: var(--very-dark-cyan);
 }
 
-.tip-options label:hover{
+.tip-options label:hover {
   color: var(--very-dark-cyan);
   background-color: rgba(from var(--strong-cyan) r g b / 0.4);
-   cursor: pointer;
+  cursor: pointer;
 }
 
 .tip-options #custom {
@@ -137,17 +136,17 @@ input[type=number]:focus {
   background: url(images/icon-person.svg) no-repeat 20px 15px;
 }
 
-.num-people-msg{
+.num-people-msg {
   display: flex;
   justify-content: space-between;
 }
 
-.error-msg{
+.error-msg {
   color: var(--error);
   font-size: 16px;
 }
 
-.error{
+.error {
   border: var(--error) solid 2px;
 }
 
@@ -197,7 +196,7 @@ button {
   font-size: 20x;
   padding: 7.5px;
   border: none;
-  border-radius: 5px;  
+  border-radius: 5px;
 }
 
 button:enabled {
@@ -208,9 +207,9 @@ button:disabled {
   opacity: 0.3;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
-  background-color: hsl( from var(--strong-cyan) h s 75%);
+  background-color: hsl(from var(--strong-cyan) h s 75%);
 }
 
 .attribution {
