@@ -46,9 +46,6 @@ body {
 
 .calculator {
   width: 395px;
-}
-
-.calculator {
   margin: 5px 10px 15px;
 }
 
@@ -59,8 +56,8 @@ label:not(.tip-options label) {
 input[type="number"] {
   -moz-appearance: textfield; /* Firefox no spin btn */
 
-  background-color: var(--very-light-grayish-cyan) !important;
-  color: var(--very-dark-cyan) !important;
+  background-color: var(--very-light-grayish-cyan);
+  color: var(--very-dark-cyan);
   text-align: right;
   border: 2px solid transparent;
   border-radius: 5px;
@@ -84,7 +81,8 @@ input[type="number"]:focus {
   margin-bottom: 30px;
   padding: 5px 15px;
   width: 100%;
-  background: url(images/icon-dollar.svg) no-repeat 20px 15px;
+  background: url(images/icon-dollar.svg) no-repeat 20px 15px
+    var(--very-light-grayish-cyan);
 }
 
 .tip-options {
@@ -133,7 +131,8 @@ input[type="number"]:focus {
   margin-top: 5px;
   padding: 5px 15px;
   width: 100%;
-  background: url(images/icon-person.svg) no-repeat 20px 15px;
+  background: url(images/icon-person.svg) no-repeat 20px 15px
+    var(--very-light-grayish-cyan);
 }
 
 .num-people-msg {
@@ -193,7 +192,7 @@ input[type="number"]:focus {
 button {
   background-color: var(--strong-cyan);
   text-transform: uppercase;
-  font-size: 20x;
+  font-size: 20px;
   padding: 7.5px;
   border: none;
   border-radius: 5px;
@@ -220,4 +219,57 @@ button:hover {
 .attribution a {
   font-size: 11px;
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 990px) {
+
+  body{
+    padding: 10px;
+  }
+  .container {
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px;
+    margin: 40px 0;
+  }
+
+  .calculator {
+    width: 320px;
+    margin: 0px;
+  }
+
+  #bill {
+    margin-bottom: 20px;
+  }
+
+  .tip-options {
+    margin-bottom: 15px;
+  }
+
+  .tip-options label,
+  .tip-options #custom {
+    width: 150px;
+  }
+
+  .results {
+    width: 320px;
+    padding: 25px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .total {
+    font-size: 32px;
+  }
+
+  .tip-amount {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    margin-top: 30px;
+  }
 }
