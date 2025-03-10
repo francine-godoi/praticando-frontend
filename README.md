@@ -60,3 +60,9 @@
 ### Time tracking dashboard challenge on Frontend Mentor
 
 <img src="./time-tracking-dashboard/time-tracking-dashboard-final-product.jpg"  style="width:800px" >
+
+---
+
+### Tip calculator app challenge on Frontend Mentor
+
+<img src="./tip-calculator-app/tip-calculator-app-final-product.jpg"  style="width:800px" >

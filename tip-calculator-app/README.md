@@ -12,4 +12,4 @@ Users should be able to:
 
 ## Screenshot
 
-![](./screenshot.jpg)
+![](./tip-calculator-app-final-product.jpg)
