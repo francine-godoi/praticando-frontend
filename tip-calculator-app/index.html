@@ -25,22 +25,22 @@
 
         <label for="tip-options">Select Tip %</label>
         <div class="tip-options" id="tip-options">
-          <input type="radio" id="five" name="tip" value="5%">
+          <input type="radio" id="five" name="tip" value="5">
           <label for="five">5%</label>
-          <input type="radio" id="ten" name="tip" value="10%">
+          <input type="radio" id="ten" name="tip" value="10">
           <label for="ten">10%</label>
-          <input type="radio" id="fifteen" name="tip" value="15%">
+          <input type="radio" id="fifteen" name="tip" value="15">
           <label for="fifteen">15%</label>
-          <input type="radio" id="twenty-five" name="tip" value="25%">
+          <input type="radio" id="twenty-five" name="tip" value="25">
           <label for="twenty-five">25%</label>
-          <input type="radio" id="fifty" name="tip" value="50%">
+          <input type="radio" id="fifty" name="tip" value="50">
           <label for="fifty">50%</label>
-          <input type="number" id="custom" placeholder="Custom" autocomplete="off">
+          <input type="number" id="custom" placeholder="Custom" autocomplete="off" onclick="resetRadioBtn()">
         </div>
 
         <div class="num-people-msg">
           <label for="num-people">Number of People</label>
-          <p class="error-msg"></p>
+          <p class="error-msg" id="error-msg"></p>
         </div>
         <input type="number" id="num-people" placeholder="0" autocomplete="off">
       </div>
@@ -63,7 +63,7 @@
           <p class="total" id="total-value">$0.00</p>
         </div>
       </div>
-      <button class="reset" disabled onclick="reset()">Reset</button>
+      <button class="reset" id="resetBtn" disabled onclick="resetAll()">Reset</button>
     </div>
   </div>
   
