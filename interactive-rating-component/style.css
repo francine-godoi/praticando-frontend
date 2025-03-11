@@ -1,0 +1,143 @@
+:root {
+    --orange: hsl(25, 97%, 53%);
+
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --dark-blue: hsl(215, 21%, 23%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --ball: hsl(215, 21%, 30%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Overpass", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--light-grey);
+}
+
+body{
+    background-color: var(--very-dark-blue);
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.container{
+    background-color: var(--dark-blue);
+    width: 390px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+/* -- Rating state start -- */
+.star-icon{
+    background-color: var(--ball);
+    border-radius: 100%;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+h1, h2{
+    font-size: 24px;
+    color: var(--white);
+}
+
+p{
+    font-weight: 400;
+    margin: 10px 0;
+    line-height: 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+ 
+.options{
+    display: flex;
+    gap: 20px;   
+}
+
+label{
+    display: inline-block;    
+    background-color: var(--ball);
+    border-radius: 100%;
+    padding: 15px 20px;
+    margin: 10px 0;
+}
+
+input[type="radio"]:checked + label {
+    background-color:var(--white);
+    color: var(--dark-blue);
+  }
+
+label:hover{
+    background-color: var(--orange);
+    color: var(--dark-blue);
+}
+
+button{
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;    
+    background-color: var(--orange);
+    color: var(--dark-blue);
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    margin-top: 15px;
+}
+
+button:hover{
+    background-color: var(--white);
+}
+
+/* -- Rating state end -- */
+
+/* -- Thank you state start -- */
+
+.thank-you{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 27px;
+} 
+
+.thank-you img{
+    margin: 10px 0;
+}
+
+.vote-detail{
+    color: var(--orange);
+    background-color: var(--ball);
+    margin: 20px 0 30px 0;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+
+span{
+    color: inherit;
+    font-weight: inherit;
+}
+
+.thank-you p{
+    text-align: center;
+}
+
+/* -- Thank you state end -- */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    font-size: inherit;
+    color: hsl(228, 45%, 44%);
+}
