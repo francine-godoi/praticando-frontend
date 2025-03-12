@@ -20,7 +20,7 @@
 
 body{
     background-color: var(--very-dark-blue);
-    height: 100dvh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,6 +33,7 @@ body{
     width: 390px;
     padding: 30px;
     border-radius: 20px;
+    margin: 10px;
 }
 
 /* -- Rating state start -- */
@@ -54,14 +55,14 @@ p{
     line-height: 20px;
 }
 
-input[type="radio"] {
-    display: none;
-}
- 
 .options{
     display: flex;
     gap: 20px;   
 }
+
+input[type="radio"] {
+    display: none;
+} 
 
 label{
     display: inline-block;    
@@ -102,7 +103,7 @@ button:hover{
 /* -- Thank you state start -- */
 
 .thank-you{
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -140,4 +141,15 @@ span{
 .attribution a {
     font-size: inherit;
     color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 450px) {
+    .container{
+        width: 350px;
+        padding: 25px;
+    }
+
+    label{
+        padding: 12.5px 17.5px;
+    }
 }

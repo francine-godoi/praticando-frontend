@@ -66,3 +66,11 @@
 ### Tip calculator app challenge on Frontend Mentor
 
 <img src="./tip-calculator-app/tip-calculator-app-final-product.jpg"  style="width:800px" >
+
+---
+
+### Interactive rating component challenge on Frontend Mentor
+
+<img src="./interative-rating-component/interative-rating-component-final-product.jpg"  style="width:800px" >
+
+---
