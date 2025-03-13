@@ -18,69 +18,79 @@
 body {
     background-image: url(assets/images/background-pattern-desktop.svg);
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center top; 
-    background-color: var(--light-pink);  
+    background-repeat: repeat-x;
+    background-position: center top;
+    background-color: var(--light-pink);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    padding: 30px;
     min-height: 100dvh;
 }
 
-.container{
+.container {
     background-color: var(--white);
     width: 580px;
     padding: 20px 30px;
     border-radius: 15px;
 }
 
-hr{
+hr {
     background-color: var(--light-pink);
     height: 1px;
     border: 0;
 }
 
-.faq{
+.faq {
     display: flex;
     gap: 15px;
     margin: 20px 0 30px;
 }
 
-.faq img{
+.faq img {
     width: 30px;
 }
 
-h1{
+h1 {
     font-size: 48px;
     font-weight: 700;
 }
 
-.accordion{
+.accordion {
     margin: 20px 0;
 }
 
-.title-question{
+.title-question {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
-.question{
-    font-size: 18px;    
+.question {
+    font-size: 18px;
 }
 
-.question:hover{
+.question:hover {
     color: hsl(from var(--dark-purple) h 70% 50%);
     cursor: pointer;
 }
 
-.answer{
+.answer {
     display: none;
     font-weight: 400;
     color: var(--grayish-purple);
+}
+
+.inactive,
+.minus {
+    display: none;
+}
+
+.open {
+    display: block;
 }
 
 .attribution {
@@ -90,15 +100,19 @@ h1{
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+    font-size: inherit;
 }
 
-@media (max-width:600px) {
-    .container{
+@media (max-width: 600px) {
+    body {
+        background-image: url(assets/images/background-pattern-mobile.svg);
+    }
+
+    .container {
         width: 375px;
     }
 
-    h1{
+    h1 {
         font-size: 42px;
     }
-
 }

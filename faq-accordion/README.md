@@ -13,4 +13,4 @@ Users should be able to:
 
 ## Screenshot
 
-![](./screenshot.jpg)
+![](./faq-accordion-final-product.jpg)

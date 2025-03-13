@@ -74,3 +74,9 @@
 <img src="./interative-rating-component/interative-rating-component-final-product.jpg"  style="width:800px" >
 
 ---
+
+### FAQ accordion challenge on Frontend Mentor
+
+<img src="./faq-accordion/faq-accordion-final-product.jpg"  style="width:800px" >
+
+---
