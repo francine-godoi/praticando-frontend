@@ -5,7 +5,6 @@
     --light-grey: hsl(217, 12%, 63%);
     --dark-blue: hsl(215, 21%, 23%);
     --very-dark-blue: hsl(216, 12%, 8%);
-    --ball: hsl(215, 21%, 30%);
 }
 
 * {
@@ -38,7 +37,7 @@ body{
 
 /* -- Rating state start -- */
 .star-icon{
-    background-color: var(--ball);
+    background-color: hsl(from var(--dark-blue) h s 30%);
     border-radius: 100%;
     padding: 15px;
     margin-bottom: 30px;
@@ -66,7 +65,7 @@ input[type="radio"] {
 
 label{
     display: inline-block;    
-    background-color: var(--ball);
+    background-color: hsl(from var(--dark-blue) h s 30%);
     border-radius: 100%;
     padding: 15px 20px;
     margin: 10px 0;
@@ -118,7 +117,7 @@ button:hover{
 
 .vote-detail{
     color: var(--orange);
-    background-color: var(--ball);
+    background-color: hsl(from var(--dark-blue) h s 30%);
     margin: 20px 0 30px 0;
     padding: 5px 20px;
     border-radius: 20px;
