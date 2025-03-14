@@ -13,4 +13,4 @@ Users should be able to:
 
 ### Screenshot
 
-![](./interative-rating-component-final-product.jpg)
+![](./interactive-rating-component-final-product.jpg)
