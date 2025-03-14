@@ -71,7 +71,7 @@
 
 ### Interactive rating component challenge on Frontend Mentor
 
-<img src="./interative-rating-component/interative-rating-component-final-product.jpg"  style="width:800px" >
+<img src="./interactive-rating-component/interactive-rating-component-final-product.jpg"  style="width:800px" >
 
 ---
 
