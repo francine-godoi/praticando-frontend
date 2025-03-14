@@ -25,19 +25,19 @@
         <div class="first-name">
           <label for="first-name">First Name</label>
           <input type="text" id="first-name">
-          <span class="required">This field is required</span>
+          <span class="required" id="required-first-name">This field is required</span>
         </div>
         <div class="last-name">
           <label for="last-name">Last Name</label>
           <input type="text" id="last-name">
-          <span class="required">This field is required</span>
+          <span class="required" id="required-last-name">This field is required</span>
         </div>
       </div>
 
       <div class="email">
         <label for="email">Email Address</label>
         <input type="email" id="email">
-        <span class="required">Please enter a valid email address</span>
+        <span class="required" id="required-email">Please enter a valid email address</span>
       </div>
 
       <div class="query">
@@ -55,13 +55,13 @@
           </div>
         </div>
 
-        <span class="required">Please select a query type</span>
+        <span class="required" id="required-query">Please select a query type</span>
       </div>
 
       <div class="message">
         <label for="message">Message</label>
         <textarea name="message" id="message"></textarea>
-        <span class="required">This field is required</span>
+        <span class="required" id="required-message">This field is required</span>
       </div>
     
       <div class="consent">
@@ -69,20 +69,20 @@
           <input type="checkbox" id="consent"></input>
           <label for="consent">I consent to being contacted by the team</label>
         </div>
-        <span class="required">To submit this form, please consent to being contacted</span>
+        <span class="required" id="required-consent">To submit this form, please consent to being contacted</span>
       </div>
 
       <button>Submit</button>
     </form>
+    <div class="success-msg">
+      <div class="title-success">
+        <img src="assets/images/icon-success-check.svg" alt="icon-success-check">
+        <h2>Message Sent!</h2>
+      </div>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
   </div>
 
-  <div class="success-msg">
-    <div class="title-success">
-      <img src="assets/images/icon-success-check.svg" alt="icon-success-check">
-      <h2>Message Sent!</h2>
-    </div>
-    <p>Thanks for completing the form. We'll be in touch soon!</p>
-  </div>
   
   <footer>
     <div class="attribution">

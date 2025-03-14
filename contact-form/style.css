@@ -30,6 +30,10 @@ body{
     gap: 10px;
 }
 
+.container{
+    position: relative;
+}
+
 .container form{
     display: flex;
     flex-direction: column;
@@ -37,7 +41,7 @@ body{
     width: 600px;
     background-color: var(--white);
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 15px;    
 }
 
 h1{
@@ -46,7 +50,7 @@ h1{
 }
 
 input, textarea, .general, .support{
-    border: solid 1px var(--grey-500-medium);
+    border: solid 1px hsl(from var(--grey-500-medium) h s 80%);
     border-radius: 5px;
     padding: 10px;
     outline: none;
@@ -57,7 +61,7 @@ input:hover, textarea:hover{
     border: solid 1px var(--green-600-medium);
 }
     
-.names, .query-type, .checkbox, .general, .support {
+.names, .query-type, .checkbox, .general, .support, .title-success {
     display: flex;    
     gap: 15px;
 }
@@ -93,8 +97,10 @@ input[type="radio"]:checked, input[type="checkbox"]:checked{
 }
 
 textarea{
-    height: 100px;
+    padding: 10px 20px;
+    height: 80px;
     resize: none;
+
 }
 
 input[type="checkbox"]{
@@ -134,6 +140,26 @@ button:hover{
 
 .success-msg{
     display: none;
+    background-color: var(--grey-900-darker);  
+    padding: 20px;    
+    border-radius: 10px;     
+    position: absolute;
+    left: 17.5%; 
+    top: 0;
+    /* top: -80px; move outside the container, doesn't fit in smaller monitors*/ 
+}
+
+.title-success img{
+    width: 15px;
+}
+
+.success-msg h2, .success-msg p{
+    color: var(--white);
+}
+
+.success-msg p{
+    margin-top: 10px;
+    font-size: 14px;    
 }
 
 .attribution { font-size: 11px; text-align: center; }
