@@ -21,35 +21,35 @@
     <form >
       <h1>Contact Us</h1>
     
-      <div class="names">
-        <div class="first-name">
+      <div class="row">
+        <div class="col">
           <label for="first-name">First Name</label>
           <input type="text" id="first-name">
           <span class="required" id="required-first-name">This field is required</span>
         </div>
-        <div class="last-name">
+        <div class="col">
           <label for="last-name">Last Name</label>
           <input type="text" id="last-name">
           <span class="required" id="required-last-name">This field is required</span>
         </div>
       </div>
 
-      <div class="email">
+      <div class="col">
         <label for="email">Email Address</label>
         <input type="email" id="email">
         <span class="required" id="required-email">Please enter a valid email address</span>
       </div>
 
-      <div class="query">
+      <div class="query col">
         <label for="query-type">Query Type</label>
 
-        <div class="query-type">
-          <div class="general">
+        <div class="row">
+          <div class="radio row">
             <input type="radio" name="query-type" id="general" value="General Enquiry"></input>
             <label for="general">General Enquiry</label>
           </div>
 
-          <div class="support">
+          <div class="radio row">
             <input type="radio" name="query-type" id="support" value="Support Request"></input>
             <label for="support">Support Request</label>
           </div>
@@ -58,14 +58,14 @@
         <span class="required" id="required-query">Please select a query type</span>
       </div>
 
-      <div class="message">
+      <div class="col">
         <label for="message">Message</label>
         <textarea name="message" id="message"></textarea>
         <span class="required" id="required-message">This field is required</span>
       </div>
     
-      <div class="consent">
-        <div class="checkbox">
+      <div class="consent col">
+        <div class="row">
           <input type="checkbox" id="consent"></input>
           <label for="consent">I consent to being contacted by the team</label>
         </div>
@@ -75,7 +75,7 @@
       <button>Submit</button>
     </form>
     <div class="success-msg">
-      <div class="title-success">
+      <div class="row">
         <img src="assets/images/icon-success-check.svg" alt="icon-success-check">
         <h2>Message Sent!</h2>
       </div>
