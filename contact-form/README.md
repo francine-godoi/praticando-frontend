@@ -17,4 +17,4 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./contact-form-final-product.jpg)
