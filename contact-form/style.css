@@ -49,6 +49,11 @@ h1 {
   margin-bottom: 7.5px;
 }
 
+span{
+  color: var(--green-600-medium);
+  margin-left: 5px;
+}
+
 input,
 textarea,
 .radio {
