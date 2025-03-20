@@ -1,16 +1,14 @@
+:root {
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
 
-:root{
---soft-orange: hsl(35, 77%, 62%);
---soft-red: hsl(5, 85%, 63%);
-
---off-white: hsl(36, 100%, 99%);
---grayish-blue: hsl(233, 8%, 79%);
---dark-grayish-blue: hsl(236, 13%, 42%);
---very-dark-blue: hsl(240, 100%, 5%);
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
 }
 
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,7 +18,7 @@
     color: var(--dark-grayish-blue);
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,20 +27,20 @@ body{
     padding: 10px;
 }
 
-.container{
+.container {
     padding: 50px 0;
     max-width: 1100px;
 }
 
-.title{
+.title {
     font-weight: 800;
 }
 
-.sub-title{
+.sub-title {
     font-weight: 700;
 }
 
-.summary{
+.summary {
     line-height: 25px;
 }
 
@@ -50,8 +48,16 @@ a {
     text-decoration: none;
 }
 
+.acvite {
+    display: block;
+}
+
+.inactive {
+    display: none;
+}
+
 /* Navbar */
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,62 +65,63 @@ nav{
     margin-bottom: 50px;
 }
 
-.nav-links{
+.nav-links .links {
     display: flex;
     gap: 38px;
 }
 
-.nav-links a:hover {
+.nav-links .links a:hover {
     color: var(--soft-red);
 }
 
-nav .burger{
+nav .burger,
+nav .close {
     display: none;
 }
 
 /* Main Grid */
 
-.main-grid{
+.main-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;  
+    gap: 25px;
 }
 
 /* Left Grid */
-.grid-main-news{
+.grid-main-news {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column: span 2 / span 2;
     gap: 25px;
 }
 
-.grid-main-news-img{
+.grid-main-news-img {
     grid-column: span 2 / span 2;
 }
 
-.grid-main-news-img img{
+.grid-main-news-img img {
     width: 100%;
 }
 
-.grid-main-news-img .mobile-img{
+.grid-main-news-img .mobile-img {
     display: none;
 }
 
-.grid-main-news-title h1{
+.grid-main-news-title h1 {
     font-size: 52px;
     padding-right: 40px;
     color: var(--very-dark-blue);
     line-height: 100%;
 }
 
-.grid-main-news-summary{
+.grid-main-news-summary {
     display: flex;
     flex-direction: column;
     gap: 25px;
     padding: 0 5px;
 }
 
-button{
+button {
     width: 50%;
     padding: 15px;
     border: none;
@@ -125,43 +132,43 @@ button{
     letter-spacing: 2px;
 }
 
-button:hover{
+button:hover {
     background-color: var(--very-dark-blue);
     color: var(--off-white);
     cursor: pointer;
 }
 
 /* Aside Grid */
-aside{
+aside {
     display: flex;
     flex-direction: column;
-    gap:30px;
+    gap: 30px;
     background-color: var(--very-dark-blue);
     padding: 20px;
 }
 
-aside h2{
+aside h2 {
     color: var(--soft-orange);
     font-size: 36px;
     margin-top: 10px;
 }
 
-aside a{
+aside a {
     color: var(--off-white);
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-aside a:hover{
+aside a:hover {
     color: var(--soft-orange);
     cursor: pointer;
 }
 
-aside .summary{
+aside .summary {
     margin-top: 10px;
 }
 
-hr{
+hr {
     border: none;
     height: 1px;
     background-color: var(--dark-grayish-blue);
@@ -169,40 +176,39 @@ hr{
 
 /* Bottom Grid */
 
-.suggestions{
+.suggestions {
     margin-top: 40px;
     display: flex;
     gap: 20px;
 }
 
-.suggestions img{
+.suggestions img {
     height: 130px;
 }
 
-.suggestions .suggestions-info{
+.suggestions .suggestions-info {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.suggestions h2{
+.suggestions h2 {
     color: var(--soft-red);
     font-size: 32px;
 }
 
-.suggestions a{
+.suggestions a {
     color: var(--very-dark-blue);
     font-size: 18px;
 }
 
-.suggestions a:hover{
+.suggestions a:hover {
     color: var(--soft-red);
     cursor: pointer;
 }
 
-
 /* Footer */
-footer{
+footer {
     margin-top: 40px;
 }
 .attribution {
@@ -215,76 +221,105 @@ footer{
     color: hsl(228, 45%, 44%);
 }
 
-
-@media (max-width:1150px) {
-
-    .container{
+@media (max-width: 1150px) {
+    .container {
         width: 650px;
     }
 
-    .main-grid{
+    .main-grid {
         grid-template-columns: repeat(1, 1fr);
-        gap: 0px;  
+        gap: 0px;
     }
 
-    .grid-main-news{
+    .grid-main-news {
         grid-template-columns: repeat(2, 1fr);
         grid-column: span 1 / span 1;
         margin-bottom: 20px;
     }
-    
 }
 
-@media (max-width:720px) {
+@media (max-width: 720px) {
+    body {
+        position: relative;
+    }
 
-    .container{
+    .container {
         width: 340px;
     }
 
-    nav{
+    nav {
         margin-bottom: 25px;
     }
 
-    nav .nav-logo img{
+    nav .nav-logo img {
         width: 45px;
     }
 
-    nav .burger, .grid-main-news-img .mobile-img{
+    nav .burger,
+    .grid-main-news-img .mobile-img {
         display: block;
     }
 
-    nav .nav-links, .grid-main-news-img .desktop-img{
+    nav .nav-links,
+    .grid-main-news-img .desktop-img {
         display: none;
     }
 
-    .grid-main-news{
+    .mobile {
+        display: block !important;
+        background-color: var(--off-white);
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 2;
+        width: 65%;
+        height: 100dvh;
+        padding: 25px;
+    }
+
+    .mobile .links {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .mobile a {
+        color: var(--very-dark-blue);
+        font-size: 20px;
+    }
+
+    nav .mobile .close {
+        margin-top: 30px;
+        margin-bottom: 70px;
+        margin-left: 80%;
+    }
+
+    .grid-main-news {
         grid-template-columns: repeat(1, 1fr);
         margin-bottom: 60px;
         gap: 15px;
     }
-    
-    .grid-main-news-img{
+
+    .grid-main-news-img {
         grid-column: span 1 / span 1;
     }
 
-    .grid-main-news-title h1{
+    .grid-main-news-title h1 {
         font-size: 42px;
         padding-right: 0;
         margin-top: 10px;
     }
 
-
-    aside{
+    aside {
         margin-bottom: 30px;
     }
 
-    aside h2{
+    aside h2 {
         font-size: 32px;
         margin-top: 0;
     }
 
-    .suggestions{
+    .suggestions {
         margin-top: 30px;
     }
-
 }
