@@ -86,3 +86,10 @@
 <img src="./contact-form/contact-form-final-product.jpg"  style="width:800px" >
 
 ---
+
+### News homepage challenge on Frontend Mentor
+
+<img src="./news-homepage/news-homepage-final-product.jpg"  style="width:800px" >
+
+---
+

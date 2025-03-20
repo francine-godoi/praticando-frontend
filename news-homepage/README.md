@@ -10,4 +10,4 @@ Users should be able to:
 
 ## Screenshot
 
-![](./screenshot.jpg)
+![](./news-homepage-final-product.jpg)
