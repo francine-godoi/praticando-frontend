@@ -25,8 +25,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 100dvh;
     background-color: var(--off-white);
+    padding: 10px;
 }
 
 .container{
@@ -55,6 +55,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    justify-items: center;
     margin-bottom: 50px;
 }
 
@@ -65,6 +66,10 @@ nav{
 
 .nav-links a:hover {
     color: var(--soft-red);
+}
+
+nav .burger{
+    display: none;
 }
 
 /* Main Grid */
@@ -89,6 +94,10 @@ nav{
 
 .grid-main-news-img img{
     width: 100%;
+}
+
+.grid-main-news-img .mobile-img{
+    display: none;
 }
 
 .grid-main-news-title h1{
@@ -204,4 +213,78 @@ footer{
 .attribution a {
     font-size: inherit;
     color: hsl(228, 45%, 44%);
+}
+
+
+@media (max-width:1150px) {
+
+    .container{
+        width: 650px;
+    }
+
+    .main-grid{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0px;  
+    }
+
+    .grid-main-news{
+        grid-template-columns: repeat(2, 1fr);
+        grid-column: span 1 / span 1;
+        margin-bottom: 20px;
+    }
+    
+}
+
+@media (max-width:720px) {
+
+    .container{
+        width: 340px;
+    }
+
+    nav{
+        margin-bottom: 25px;
+    }
+
+    nav .nav-logo img{
+        width: 45px;
+    }
+
+    nav .burger, .grid-main-news-img .mobile-img{
+        display: block;
+    }
+
+    nav .nav-links, .grid-main-news-img .desktop-img{
+        display: none;
+    }
+
+    .grid-main-news{
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 60px;
+        gap: 15px;
+    }
+    
+    .grid-main-news-img{
+        grid-column: span 1 / span 1;
+    }
+
+    .grid-main-news-title h1{
+        font-size: 42px;
+        padding-right: 0;
+        margin-top: 10px;
+    }
+
+
+    aside{
+        margin-bottom: 30px;
+    }
+
+    aside h2{
+        font-size: 32px;
+        margin-top: 0;
+    }
+
+    .suggestions{
+        margin-top: 30px;
+    }
+
 }
