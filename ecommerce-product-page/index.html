@@ -45,66 +45,98 @@
             </nav>
             <hr />
             <main>
-              <div class="grid-container">
-                  <div class="grid-item-left">
-                      <img
-                          class="main-image"
-                          src="images/image-product-1.jpg"
-                          alt="sneaker1 image"
-                      />
-                      <div class="grid-gallery">
-                          <img
-                              src="images/image-product-1-thumbnail.jpg"
-                              alt="sneaker2 image"
-                          />
-                          <img
-                              src="images/image-product-2-thumbnail.jpg"
-                              alt="sneaker3 image"
-                          />
-                          <img
-                              src="images/image-product-3-thumbnail.jpg"
-                              alt="sneaker4 image"
-                          />
-                          <img
-                              src="images/image-product-4-thumbnail.jpg"
-                              alt="sneaker5 image"
-                          />
-                      </div>
-                  </div>
-                  <div class="grid-item-right">
-                      <p class="company">Sneaker Company</p>
-                      <h1>Fall Limited Edition Sneakers</h1>
-                      <p class="description">
-                          These low-profile sneakers are your perfect casual wear
-                          companion. Featuring a durable rubber outer sole,
-                          they’ll withstand everything the weather can offer.
-                      </p>
-                      <div class="new-price-info">
-                          <p class="new-price">$125.00</p>
-                          <span class="discount">50%</span>
-                      </div>
-                      <p class="old-price">$250.00</p>
-                      <div class="btn-container">
-                          <div class="quantity-box">
-                              <img
-                                  id="minus"
-                                  src="images/icon-minus.svg"
-                                  alt="icon minus"
-                              />
-                              <p class="quantity">0</p>
-                              <img
-                                  id="plus"
-                                  src="images/icon-plus.svg"
-                                  alt="icon plus"
-                              />
-                          </div>
-                          <button>
-                              <img src="images/shopping-cart.png" alt="" />
-                              Add to cart
-                          </button>
-                      </div>
-                  </div>
-              </div>
+                <div class="grid-container">
+                    <div class="grid-item-left">
+                        <div class="main-image-display">
+                            <img
+                                class="main-image"
+                                src="images/image-product-1.jpg"
+                                alt="sneaker1 image"
+                            />
+                            <img
+                                class="main-image inactive"
+                                src="images/image-product-2.jpg"
+                                alt="sneaker2 image"
+                            />
+                            <img
+                                class="main-image inactive"
+                                src="images/image-product-3.jpg"
+                                alt="sneaker3 image"
+                            />
+                            <img
+                                class="main-image inactive"
+                                src="images/image-product-4.jpg"
+                                alt="sneaker4 image"
+                            />
+                        </div>
+                        <div class="grid-gallery">
+                            <div class="thumb-active">
+                                <img
+                                    src="images/image-product-1-thumbnail.jpg"
+                                    alt="sneaker1 image" class="active" 
+                                    onclick="changeImage('1')"                            
+                                />
+                            </div>
+                            <div>
+                                <img
+                                    src="images/image-product-2-thumbnail.jpg"
+                                    alt="sneaker2 image"
+                                    onclick="changeImage('2')"
+                                />
+                            </div>
+                            <div>
+                                <img
+                                    src="images/image-product-3-thumbnail.jpg"
+                                    alt="sneaker3 image"
+                                    onclick="changeImage('3')"
+                                />
+                            </div>
+                            <div>
+                                <img
+                                    src="images/image-product-4-thumbnail.jpg"
+                                    alt="sneaker4 image"
+                                    onclick="changeImage('4')"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item-right">
+                        <p class="company">Sneaker Company</p>
+                        <h1>Fall Limited Edition Sneakers</h1>
+                        <p class="description">
+                            These low-profile sneakers are your perfect casual
+                            wear companion. Featuring a durable rubber outer
+                            sole, they’ll withstand everything the weather can
+                            offer.
+                        </p>
+                        <div class="new-price-info">
+                            <p class="new-price">$125.00</p>
+                            <span class="discount">50%</span>
+                        </div>
+                        <p class="old-price">$250.00</p>
+                        <div class="btn-container">
+                            <div class="quantity-box">
+                                <img
+                                    id="minus"
+                                    src="images/icon-minus.svg"
+                                    alt="icon minus"
+                                    onclick="decrease()"
+                                />
+                                <p class="quantity">0</p>
+                                <img
+                                    id="plus"
+                                    src="images/icon-plus.svg"
+                                    alt="icon plus"
+                                    onclick="increase()"
+                                />
+                            </div>
+                            <button>
+                                <img src="images/shopping-cart2.svg" alt="" />
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </main>
 
             <footer>
@@ -118,5 +150,6 @@
                 </div>
             </footer>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
