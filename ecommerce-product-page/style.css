@@ -48,8 +48,18 @@ a {
     gap: 30px;
 }
 
-.nav-links a:hover{     
+.nav-links a{
+    position: relative;
+}
+
+.nav-links a:hover::after{     
+    content: '';
+    position: absolute;
     border-bottom: 3px solid var(--orange);    
+    height: 3px;
+    width: 100%;
+    bottom: -40px;
+    left: 0;
 }
 
 .nav-itens .logo {
@@ -69,12 +79,12 @@ a {
 .nav-itens .avatar {
     width: 45px;
     border: transparent solid 2px;
+    border-radius: 50%;
 }
 
 .nav-itens .avatar:hover {
     cursor: pointer;
     border: var(--orange) solid 2px;
-    border-radius: 50%;
 }
 
 hr {
