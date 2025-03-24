@@ -1,151 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,40..300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,40..300&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
 
-    <title>Frontend Mentor | E-commerce product page</title>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <nav>
-          <div class="nav-itens">
-            <img class="logo" src="images/logo.svg" alt="logo" />
-            <div class="nav-links">
-              <a href="#">Collections</a>
-              <a href="#">Men</a>
-              <a href="#">Women</a>
-              <a href="#">About</a>
-              <a href="#">Contact</a>
-            </div>
-          </div>
-          <div class="nav-itens">
-            <img id="cart" src="images/icon-cart.svg" alt="cart icon" />
-            <img class="avatar" src="images/image-avatar.png" alt="avatar" />
-          </div>
-        </nav>
-      </header>
-      <hr />
-      <main>
-        <div class="grid-container">
-          <div class="grid-item-left">
-            <div class="main-image-display">
-              <img
-                class="main-image"
-                src="images/image-product-1.jpg"
-                alt="sneaker1 image"
-              />
-              <img
-                class="main-image inactive"
-                src="images/image-product-2.jpg"
-                alt="sneaker2 image"
-              />
-              <img
-                class="main-image inactive"
-                src="images/image-product-3.jpg"
-                alt="sneaker3 image"
-              />
-              <img
-                class="main-image inactive"
-                src="images/image-product-4.jpg"
-                alt="sneaker4 image"
-              />
-            </div>
-            <div class="grid-gallery">
-              <div class="thumb-active">
-                <img
-                  src="images/image-product-1-thumbnail.jpg"
-                  alt="sneaker1 image"
-                  class="active"
-                  onclick="changeImage(event)"
-                />
-              </div>
-              <div>
-                <img
-                  src="images/image-product-2-thumbnail.jpg"
-                  alt="sneaker2 image"
-                  onclick="changeImage(event)"
-                />
-              </div>
-              <div>
-                <img
-                  src="images/image-product-3-thumbnail.jpg"
-                  alt="sneaker3 image"
-                  onclick="changeImage(event)"
-                />
-              </div>
-              <div>
-                <img
-                  src="images/image-product-4-thumbnail.jpg"
-                  alt="sneaker4 image"
-                  onclick="changeImage(event)"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="grid-item-right">
-            <p class="company">Sneaker Company</p>
-            <h1>Fall Limited Edition Sneakers</h1>
-            <p class="description">
-              These low-profile sneakers are your perfect casual wear companion.
-              Featuring a durable rubber outer sole, they’ll withstand
-              everything the weather can offer.
-            </p>
-            <div class="new-price-info">
-              <p class="new-price">$125.00</p>
-              <span class="discount">50%</span>
-            </div>
-            <p class="old-price">$250.00</p>
-            <div class="btn-container">
-              <div class="quantity-box">
-                <img
-                  id="minus"
-                  src="images/icon-minus.svg"
-                  alt="icon minus"
-                  onclick="decrease()"
-                />
-                <p class="quantity" id="quantity">0</p>
-                <img
-                  id="plus"
-                  src="images/icon-plus.svg"
-                  alt="icon plus"
-                  onclick="increase()"
-                />
-              </div>
-              <button>
-                <img src="images/shopping-cart2.svg" alt="" />
-                Add to cart
-              </button>
-            </div>
-          </div>
+        <title>Frontend Mentor | E-commerce product page</title>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <nav>
+                    <div class="nav-itens">
+                        <img class="logo" src="images/logo.svg" alt="logo" />
+                        <div class="nav-links">
+                            <a href="#">Collections</a>
+                            <a href="#">Men</a>
+                            <a href="#">Women</a>
+                            <a href="#">About</a>
+                            <a href="#">Contact</a>
+                        </div>
+                    </div>
+                    <div class="nav-itens">
+                        <div class="cart-container">
+                          
+                            <img id="icon-cart"                                
+                                src="images/icon-cart.svg"
+                                alt="cart icon"
+                            />
+                            <span id="span-icon"></span>
+                            <div class="cart dont-show" id="cart-content">
+                                <h3 class="title">Cart</h3>
+                                <hr />
+                                <div class="cart-details">
+                                    <div class="empty-cart" >
+                                        <p id="cart-empty">Your cart is empty</p>
+                                    </div>
+
+                                    <div class="cart-items dont-show"  id="cart-full">
+                                        <div class="items">
+                                            <div class="thumb">
+                                                <img
+                                                    src="images/image-product-1-thumbnail.jpg"
+                                                />
+                                            </div>
+                                            <div class="items-description">
+                                                <h3>
+                                                    Fall Limited Edition
+                                                    Sneakers
+                                                </h3>
+                                                <div class="div-prices">
+                                                    <p>
+                                                        $125.00 x
+                                                        <span
+                                                            id="item-quantity"
+                                                        ></span>
+                                                    </p>
+                                                    <span id="total"></span>
+                                                </div>
+                                            </div>
+                                            <div class="icon" onclick="deleteItem()">
+                                                <img
+                                                    src="images/icon-delete.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <button class="checkout">
+                                            Checkout
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img
+                            class="avatar"
+                            src="images/image-avatar.png"
+                            alt="avatar"
+                        />
+                    </div>
+                </nav>
+            </header>
+            <hr />
+            <main>
+                <div class="grid-container">
+                    <div class="grid-item-left">
+                        <div class="main-image-display">
+                            <img
+                                class="main-image"
+                                src="images/image-product-1.jpg"
+                                alt="sneaker1 image"
+                            />
+                            <img
+                                class="main-image inactive"
+                                src="images/image-product-2.jpg"
+                                alt="sneaker2 image"
+                            />
+                            <img
+                                class="main-image inactive"
+                                src="images/image-product-3.jpg"
+                                alt="sneaker3 image"
+                            />
+                            <img
+                                class="main-image inactive"
+                                src="images/image-product-4.jpg"
+                                alt="sneaker4 image"
+                            />
+                        </div>
+                        <div class="grid-gallery">
+                            <div class="thumb-active">
+                                <img
+                                    src="images/image-product-1-thumbnail.jpg"
+                                    alt="sneaker1 image"
+                                    class="active"
+                                    onclick="changeImage(event)"
+                                />
+                            </div>
+                            <div>
+                                <img
+                                    src="images/image-product-2-thumbnail.jpg"
+                                    alt="sneaker2 image"
+                                    onclick="changeImage(event)"
+                                />
+                            </div>
+                            <div>
+                                <img
+                                    src="images/image-product-3-thumbnail.jpg"
+                                    alt="sneaker3 image"
+                                    onclick="changeImage(event)"
+                                />
+                            </div>
+                            <div>
+                                <img
+                                    src="images/image-product-4-thumbnail.jpg"
+                                    alt="sneaker4 image"
+                                    onclick="changeImage(event)"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item-right">
+                        <p class="company">Sneaker Company</p>
+                        <h1>Fall Limited Edition Sneakers</h1>
+                        <p class="description">
+                            These low-profile sneakers are your perfect casual
+                            wear companion. Featuring a durable rubber outer
+                            sole, they’ll withstand everything the weather can
+                            offer.
+                        </p>
+                        <div class="new-price-info">
+                            <p class="new-price">$125.00</p>
+                            <span class="discount">50%</span>
+                        </div>
+                        <p class="old-price">$250.00</p>
+                        <div class="btn-container">
+                            <div class="quantity-box">
+                                <img
+                                    id="minus"
+                                    src="images/icon-minus.svg"
+                                    alt="icon minus"
+                                    onclick="decrease()"
+                                />
+                                <p class="quantity" id="quantity">0</p>
+                                <img
+                                    id="plus"
+                                    src="images/icon-plus.svg"
+                                    alt="icon plus"
+                                    onclick="increase()"
+                                />
+                            </div>
+                            <button onclick="addToCart()">
+                                <img src="images/shopping-cart2.svg" alt="" />
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer>
+                <div class="attribution">
+                    Challenge by
+                    <a
+                        href="https://www.frontendmentor.io?ref=challenge"
+                        target="_blank"
+                        >Frontend Mentor</a
+                    >. Coded by <a href="#">Francine G</a>.
+                </div>
+            </footer>
         </div>
-      </main>
-
-      <footer>
-        <div class="attribution">
-          Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-            >Frontend Mentor</a
-          >. Coded by <a href="#">Francine G</a>.
-        </div>
-      </footer>
-    </div>
-    <script src="script.js"></script>
-  </body>
+        <script src="script.js"></script>
+    </body>
 </html>

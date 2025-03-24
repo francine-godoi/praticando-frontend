@@ -25,3 +25,49 @@ function changeImage(e){
     }
 
 }
+
+function addToCart(){
+    const quantity = document.getElementById('quantity').textContent
+    const itemQuantity = document.getElementById('item-quantity')
+    const total = document.getElementById('total')
+    const spanIcon = document.getElementById('span-icon')
+
+    const cartEmpty = document.getElementById('cart-empty')
+    const cartFull = document.getElementById('cart-full')
+
+    console.log(quantity)
+    if (quantity > 0){
+        itemQuantity.textContent = quantity
+        total.textContent ='$'+ (Number(quantity) * 125).toFixed(2)
+        cartEmpty.classList.add('dont-show')
+        cartFull.classList.remove('dont-show')
+        spanIcon.classList.remove('dont-show')
+        spanIcon.textContent = quantity
+    }
+}
+
+function deleteItem(){
+    const cartEmpty = document.getElementById('cart-empty')
+    const cartFull = document.getElementById('cart-full')
+    const spanIcon = document.getElementById('span-icon')
+
+    cartEmpty.classList.remove('dont-show')
+    cartFull.classList.add('dont-show')
+    spanIcon.classList.add('dont-show')
+}
+
+document.getElementById('icon-cart').addEventListener('mouseover', () =>{
+    const cart = document.getElementById('cart-content')
+    cart.classList.remove('dont-show')
+})
+
+
+document.addEventListener('click', event => {
+    const cart = document.getElementById('cart-content')
+    const isClickInside = cart.contains(event.target)
+
+    if (!isClickInside) {
+      // The click was OUTSIDE the cart
+      cart.classList.add('dont-show')
+    }
+});
