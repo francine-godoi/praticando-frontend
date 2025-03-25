@@ -23,7 +23,7 @@
 body {
     background-color: var(--white);
     display: flex;
-    justify-content: center;    
+    justify-content: center;
 }
 
 .container {
@@ -92,7 +92,6 @@ a {
     top: -25%;
 }
 
-
 .nav-itens .cart {
     position: absolute;
     top: 40px;
@@ -121,7 +120,7 @@ a {
     padding: 20px;
 }
 
-.nav-itens .cart .cart-details .empty-cart{
+.nav-itens .cart .cart-details .empty-cart {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -132,58 +131,59 @@ a {
     font-size: 14px;
 }
 
-.cart-items{
+.cart-items {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.items{
+.items {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.items .thumb img{
+.items .thumb img {
     width: 50px;
     height: 50px;
     border-radius: 5px;
 }
 
-.items .icon img{
+.items .icon img {
     width: 15px;
 }
 
-.items .items-description{
+.items .items-description {
     display: flex;
-    flex-direction: column;  
-    gap: 5px;  
+    flex-direction: column;
+    gap: 5px;
 }
 
-.items .items-description .item-title{
+.items .items-description .item-title {
     margin: 0;
     color: var(--grayish-blue);
 }
 
-.items .items-description h3, .items .items-description p{
-    font-size: 16px!important;
+.items .items-description h3,
+.items .items-description p {
+    font-size: 16px !important;
 }
 
-.items .items-description .div-prices{
+.items .items-description .div-prices {
     display: flex;
     gap: 10px;
 }
 
-.items .items-description #total{
+.items .items-description #total {
     font-weight: 700;
-    color: var(--very-dark-blue)
+    color: var(--very-dark-blue);
 }
 
-.cart .cart-details .cart-items button{
-    width: 100%;    
+.cart .cart-details .cart-items button {
+    width: 100%;
 }
 
-.dont-show{
+.dont-show {
     display: none;
 }
 
@@ -253,7 +253,11 @@ hr {
     display: none;
 }
 
-.light-box{
+/* End Lef Grid - Galery */
+
+/* Light Box */
+
+.light-box {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -262,72 +266,71 @@ hr {
     display: none;
     align-items: center;
     justify-content: center;
-    /* background-color: var(--black); */
 }
 
-.light-box .grid-item-left{
+.light-box .grid-item-left {
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.light-box .grid-item-left .main-image{
+.light-box .grid-item-left .main-image {
     width: 500px;
     position: relative;
     border-radius: 10px;
 }
 
-.light-box .main-image-display{
+.light-box .main-image-display {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.light-box .grid-gallery{
+.light-box .grid-gallery {
     padding: 10px;
     width: 500px;
-    padding: 0 30px;    
+    padding: 0 30px;
 }
 
 .light-box .previous,
-.light-box .next{
+.light-box .next {
     cursor: pointer;
     position: absolute;
     background-color: var(--white);
     border-radius: 50%;
-    padding: 8px 15px;
+    padding: 12.5px 20px;
     top: 40%;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 20px;
     color: var(--very-dark-blue);
 }
 
-.light-box .previous{
-    left: calc(50% - 270px);
+.light-box .previous {
+    left: calc(50% - 275px);
 }
 
-.light-box .next{
-    right: calc(50% - 270px);
+.light-box .next {
+    right: calc(50% - 275px);
 }
 
-.light-box .close-btn{
+.light-box .close-btn {
     cursor: pointer;
     position: absolute;
     color: var(--white);
     top: calc(50% - 370px);
-    right: calc(50% - 250px);;
+    right: calc(50% - 250px);
     font-size: 40px;
 }
 
 .light-box .previous:hover,
 .light-box .next:hover,
-.light-box .close-btn:hover{
+.light-box .close-btn:hover {
     color: var(--orange);
 }
 
-.light-box-thumb-active{
+.light-box-thumb-active {
     border: var(--orange) 2px solid;
     border-radius: 12px;
     background-color: var(--white);
@@ -343,7 +346,7 @@ hr {
     opacity: 75%;
 }
 
-/* End Lef Grid - Galery */
+/* End Light Box */
 
 /* Right Grid - Product Info */
 
