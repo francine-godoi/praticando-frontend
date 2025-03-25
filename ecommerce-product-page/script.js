@@ -8,27 +8,6 @@ function increase() {
     quantity.textContent = Number(quantity.textContent) + 1;
 }
 
-function changeImage(e) {
-    const thumbs = document
-        .getElementsByClassName("grid-gallery")
-        .item(0).children;
-    const mainImgs = document
-        .getElementsByClassName("main-image-display")
-        .item(0).children;
-
-    for (let i = 0; i < thumbs.length; i++) {
-        if (thumbs[i].children[0] === e.target) {
-            thumbs[i].classList.add("thumb-active");
-            thumbs[i].children[0].classList.add("active");
-            mainImgs[i].classList.remove("inactive");
-        } else {
-            thumbs[i].classList.remove("thumb-active");
-            thumbs[i].children[0].classList.remove("active");
-            mainImgs[i].classList.add("inactive");
-        }
-    }
-}
-
 function addToCart() {
     const quantity = document.getElementById("quantity").textContent;
     const itemQuantity = document.getElementById("item-quantity");
@@ -74,6 +53,27 @@ document.addEventListener("click", (event) => {
     }
 });
 
+function changeImage(e) {
+    const thumbs = document
+        .getElementsByClassName("grid-gallery")
+        .item(0).children;
+    const mainImgs = document
+        .getElementsByClassName("main-image-display")
+        .item(0).children;
+
+    for (let i = 0; i < thumbs.length; i++) {
+        if (thumbs[i].children[0] === e.target) {
+            thumbs[i].classList.add("thumb-active");
+            thumbs[i].children[0].classList.add("active");
+            mainImgs[i].classList.remove("inactive");
+        } else {
+            thumbs[i].classList.remove("thumb-active");
+            thumbs[i].children[0].classList.remove("active");
+            mainImgs[i].classList.add("inactive");
+        }
+    }
+}
+
 function openLightBox() {
     document.getElementById("light-box").style.display = "flex";
     document.getElementById("dim").classList.add("dim");
@@ -106,28 +106,10 @@ function changeImageLightBox(index) {
 }
 
 function previousImg() {
-    const activeImg = document.getElementsByClassName("light-box-thumb-active");
-    const thumbs = document
-        .getElementsByClassName("light-box-grid-gallery")
-        .item(0).children;
-
-    let activeImgId = "";
-
-    for (let i = 0; i < activeImg.length; i++) {
-        if (
-            activeImg[i].parentElement.classList.contains(
-                "light-box-grid-gallery"
-            )
-        ) {
-            activeImgId = activeImg[i].children[0].id;
-            break;
-        }
-    }
-
-    activeImgId = Number(activeImgId);
+    [activeImgId, thumbsLenght] = getActiveImgId();
 
     if (activeImgId - 1 === 0) {
-        activeImgId = thumbs.length;
+        activeImgId = thumbsLenght;
     } else {
         activeImgId -= 1;
     }
@@ -136,6 +118,18 @@ function previousImg() {
 }
 
 function nextImg() {
+    [activeImgId, thumbsLenght] = getActiveImgId();
+
+    if (activeImgId + 1 > thumbsLenght) {
+        activeImgId = 1;
+    } else {
+        activeImgId += 1;
+    }
+
+    changeImageLightBox(activeImgId);
+}
+
+function getActiveImgId() {
     const activeImg = document.getElementsByClassName("light-box-thumb-active");
     const thumbs = document
         .getElementsByClassName("light-box-grid-gallery")
@@ -152,25 +146,16 @@ function nextImg() {
             activeImgId = activeImg[i].children[0].id;
             break;
         }
-        console.log(activeImg[i].parentElement);
     }
-
-    activeImgId = Number(activeImgId);
-
-    if (activeImgId + 1 > thumbs.length) {
-        activeImgId = 1;
-    } else {
-        activeImgId += 1;
-    }
-
-    changeImageLightBox(activeImgId);
+    return [Number(activeImgId), thumbs.length];
 }
 
-lightBoxThumbs = document.getElementsByClassName("light-box-grid-gallery")
-        .item(0).children
-for(let i =0; i< lightBoxThumbs.length; i++){
-    lightBoxThumbs[i].addEventListener('mouseover', ()=>{
-        lightBoxThumbs[i].style.backgroundColor  = 'white'
-        lightBoxThumbs[i].style.borderRadius  = '12px'
-    })
+lightBoxThumbs = document
+    .getElementsByClassName("light-box-grid-gallery")
+    .item(0).children;
+for (let i = 0; i < lightBoxThumbs.length; i++) {
+    lightBoxThumbs[i].addEventListener("mouseover", () => {
+        lightBoxThumbs[i].style.backgroundColor = "white";
+        lightBoxThumbs[i].style.borderRadius = "12px";
+    });
 }
