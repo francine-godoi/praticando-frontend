@@ -22,6 +22,7 @@
         <title>Frontend Mentor | E-commerce product page</title>
     </head>
     <body>
+        
         <div class="container">
             <header>
                 <nav>
@@ -37,8 +38,8 @@
                     </div>
                     <div class="nav-itens">
                         <div class="cart-container">
-                          
-                            <img id="icon-cart"                                
+                            <img
+                                id="icon-cart"
                                 src="images/icon-cart.svg"
                                 alt="cart icon"
                             />
@@ -47,11 +48,16 @@
                                 <h3 class="title">Cart</h3>
                                 <hr />
                                 <div class="cart-details">
-                                    <div class="empty-cart" >
-                                        <p id="cart-empty">Your cart is empty</p>
+                                    <div class="empty-cart">
+                                        <p id="cart-empty">
+                                            Your cart is empty
+                                        </p>
                                     </div>
 
-                                    <div class="cart-items dont-show"  id="cart-full">
+                                    <div
+                                        class="cart-items dont-show"
+                                        id="cart-full"
+                                    >
                                         <div class="items">
                                             <div class="thumb">
                                                 <img
@@ -73,7 +79,10 @@
                                                     <span id="total"></span>
                                                 </div>
                                             </div>
-                                            <div class="icon" onclick="deleteItem()">
+                                            <div
+                                                class="icon"
+                                                onclick="deleteItem()"
+                                            >
                                                 <img
                                                     src="images/icon-delete.svg"
                                                     alt=""
@@ -99,7 +108,10 @@
             <main>
                 <div class="grid-container">
                     <div class="grid-item-left">
-                        <div class="main-image-display">
+                        <div
+                            class="main-image-display"
+                            onclick="openLightBox()"
+                        >
                             <img
                                 class="main-image"
                                 src="images/image-product-1.jpg"
@@ -153,6 +165,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="grid-item-right">
                         <p class="company">Sneaker Company</p>
                         <h1>Fall Limited Edition Sneakers</h1>
@@ -202,6 +215,77 @@
                     >. Coded by <a href="#">Francine G</a>.
                 </div>
             </footer>
+        </div>
+        <div id="dim"></div>
+        <div class="light-box" id="light-box">
+            <div class="grid-item-left">
+                <a class="close-btn" onclick="closeLightBox()">&times;</a>
+                <div
+                    class="main-image-display light-box-main-image"                           
+                >
+                    <img
+                        class="main-image"
+                        src="images/image-product-1.jpg"
+                        alt="sneaker1 image"
+                    />
+                    <img
+                        class="main-image inactive"
+                        src="images/image-product-2.jpg"
+                        alt="sneaker2 image"
+                    />
+                    <img
+                        class="main-image inactive"
+                        src="images/image-product-3.jpg"
+                        alt="sneaker3 image"
+                    />
+                    <img
+                        class="main-image inactive"
+                        src="images/image-product-4.jpg"
+                        alt="sneaker4 image"
+                    />
+                </div>
+
+                <a class="previous" onclick="previousImg()"
+                    >&#10094;</a
+                >
+                <a class="next" onclick="nextImg()">&#10095;</a>
+                
+                <div class="grid-gallery light-box-grid-gallery">
+                    <div class="light-box-thumb-active">
+                        <img
+                            src="images/image-product-1-thumbnail.jpg"
+                            alt="sneaker1 image"
+                            class="active"
+                            id="1"
+                            onclick="changeImageLightBox(1)"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            src="images/image-product-2-thumbnail.jpg"
+                            alt="sneaker2 image"
+                            id="2"
+                            onclick="changeImageLightBox(2)"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            src="images/image-product-3-thumbnail.jpg"
+                            alt="sneaker3 image"
+                            id="3"
+                            onclick="changeImageLightBox(3)"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            src="images/image-product-4-thumbnail.jpg"
+                            alt="sneaker4 image"
+                            id="4"
+                            onclick="changeImageLightBox(4)"
+                        />
+                    </div>
+                </div>
+            </div>
         </div>
         <script src="script.js"></script>
     </body>
