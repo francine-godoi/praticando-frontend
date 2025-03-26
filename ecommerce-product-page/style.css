@@ -332,9 +332,9 @@ hr {
     font-size: 40px;
 }
 
-.light-box .previous:hover,
-.light-box .next:hover,
-.light-box .close-btn:hover {
+.light-box .light-box-previous:hover,
+.light-box .light-box-next:hover,
+.light-box .light-box-close-btn:hover {
     color: var(--orange);
 }
 

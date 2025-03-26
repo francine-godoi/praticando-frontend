@@ -15,4 +15,22 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshots/normal-page.jpg)
+
+![](./screenshots/active-page.jpg)
+
+![](./screenshots/normal-page-empty-cart.jpg)
+
+![](./screenshots/normal-page-full-cart.jpg)
+
+![](./screenshots/normal-lightbox.jpg)
+
+![](./screenshots/active-lightbox.jpg)
+
+![](./screenshots/normal-page-mobile.jpg)
+
+![](./screenshots/mobile-empty-cart.jpg)
+
+![](./screenshots/mobile-full-cart.jpg)
+
+![](./screenshots/mobile-active-menu.jpg)

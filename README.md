@@ -93,3 +93,8 @@
 
 ---
 
+### E-commerce product page challenge on Frontend Mentor
+
+<img src="ecommerce-product-page/screenshots/normal-page.jpg"  style="width:800px" >
+
+---
