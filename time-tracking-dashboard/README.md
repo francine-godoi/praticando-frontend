@@ -12,4 +12,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./time-tracking-dashboard-final-product.jpg)
+![](./screenshots/time-tracking-dashboard-final-product.jpg)
+
+![](./screenshots/time-tracking-dashboard-hover.jpg)
+
+![](./screenshots/time-tracking-dashboard-mobile.jpg)

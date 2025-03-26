@@ -2,6 +2,6 @@
 
 This is a solution to the [Recipe page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm). 
 
-## Screenshot
+### Screenshot
 
-![](./recipe-page-final-product.jpg)
+![](./screenshots/recipe-page-final-product.jpg)

@@ -10,6 +10,12 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Calculate the correct tip and total cost of the bill per person
 
-## Screenshot
+### Screenshot
 
-![](./tip-calculator-app-final-product.jpg)
+![](./screenshots/tip-calculator-app-final-product.jpg)
+
+![](./screenshots/tip-calculator-app-filled.jpg)
+
+![](./screenshots/tip-calculator-app-error.jpg)
+
+![](./screenshots/tip-calculator-app-mobile.jpg)

@@ -17,4 +17,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./contact-form-final-product.jpg)
+![](./screenshots/contact-form-final-product.jpg)
+
+![](./screenshots/contact-form-filled.jpg)
+
+![](./screenshots/contact-form-error-state.jpg)
+
+![](./screenshots/contact-form-success-message.jpg)
+
+![](./screenshots/contact-form-mobile.jpg)

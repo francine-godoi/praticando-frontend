@@ -13,4 +13,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./interactive-rating-component-final-product.jpg)
+![](./screenshots/interactive-rating-component-final-product.jpg)
+
+![](./screenshots/interactive-rating-component-hover.jpg)
+
+![](./screenshots/interactive-rating-component-hover-2.jpg)
+
+![](./screenshots/interactive-rating-component-success-message.jpg)

@@ -9,6 +9,12 @@ Users should be able to:
 - View the optimal layout for the component depending on their device's screen size
 - See the social media share links when they click the share icon
 
-## Screenshot
+### Screenshot
 
-![](./article-preview-component-final-product.jpg)
+![](./screenshots/article-preview-component-final-product.jpg)
+
+![](./screenshots/article-preview-component-active-share.jpg)
+
+![](./screenshots/article-preview-component-mobile.jpg)
+
+![](./screenshots/article-preview-component-mobile-active.jpg)
