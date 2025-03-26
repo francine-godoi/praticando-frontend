@@ -95,6 +95,6 @@
 
 ### E-commerce product page challenge on Frontend Mentor
 
-<img src="ecommerce-product-page/screenshots/normal-page.jpg"  style="width:800px" >
+<img src="ecommerce-product-page/screenshots/ecommerce-product-page-final-product.jpg"  style="width:800px" >
 
 ---

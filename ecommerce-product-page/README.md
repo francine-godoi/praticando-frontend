@@ -15,22 +15,22 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots/normal-page.jpg)
+![](./screenshots/ecommerce-product-page-final-product.jpg)
 
-![](./screenshots/active-page.jpg)
+![](./screenshots/ecommerce-product-page-active.jpg)
 
-![](./screenshots/normal-page-empty-cart.jpg)
+![](./screenshots/ecommerce-product-page-empty-cart.jpg)
 
-![](./screenshots/normal-page-full-cart.jpg)
+![](./screenshots/ecommerce-product-page-full-cart.jpg)
 
-![](./screenshots/normal-lightbox.jpg)
+![](./screenshots/ecommerce-product-page-normal-lightbox.jpg)
 
-![](./screenshots/active-lightbox.jpg)
+![](./screenshots/ecommerce-product-page-active-lightbox.jpg)
 
-![](./screenshots/normal-page-mobile.jpg)
+![](./screenshots/ecommerce-product-page-mobile.jpg)
 
-![](./screenshots/mobile-empty-cart.jpg)
+![](./screenshots/ecommerce-product-page-mobile-empty-cart.jpg)
 
-![](./screenshots/mobile-full-cart.jpg)
+![](./screenshots/ecommerce-product-page-mobile-full-cart.jpg)
 
-![](./screenshots/mobile-active-menu.jpg)
+![](./screenshots/ecommerce-product-page-mobile-active-menu.jpg)
