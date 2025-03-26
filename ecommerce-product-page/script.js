@@ -173,3 +173,20 @@ for (let i = 0; i < lightBoxThumbs.length; i++) {
         lightBoxThumbs[i].style.borderRadius = "12px";
     });
 }
+
+
+function openMenu(){
+    const navLinks = document.getElementById('nav-links')
+    const closeBtn = document.getElementById('close-menu')
+    navLinks.classList.toggle("mobile")
+    closeBtn.classList.toggle("inactive")
+    document.getElementById("dim").classList.add("dim");
+}
+
+function closeMenu(){
+    const navLinks = document.getElementById('nav-links')
+    const closeBtn = document.getElementById('close-menu')
+    navLinks.classList.toggle("mobile")
+    closeBtn.classList.toggle("inactive")
+    document.getElementById("dim").classList.remove("dim");
+}

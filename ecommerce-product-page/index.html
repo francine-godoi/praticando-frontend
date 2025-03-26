@@ -30,9 +30,16 @@
                             src="images/icon-menu.svg"
                             alt="icon-menu"
                             class="burger"
+                            onclick="openMenu()"
                         />
                         <img class="logo" src="images/logo.svg" alt="logo" />
-                        <div class="nav-links">
+                        <div id="nav-links" class="nav-links mobile">
+                            <img
+                                class="inactive"
+                                id="close-menu"
+                                src="images/icon-close.svg"
+                                onclick="closeMenu()"
+                            />
                             <a href="#">Collections</a>
                             <a href="#">Men</a>
                             <a href="#">Women</a>
