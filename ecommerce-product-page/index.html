@@ -26,7 +26,11 @@
             <header>
                 <nav>
                     <div class="nav-itens">
-                        <img src="images/icon-menu.svg" alt="icon-menu" class="burger">
+                        <img
+                            src="images/icon-menu.svg"
+                            alt="icon-menu"
+                            class="burger"
+                        />
                         <img class="logo" src="images/logo.svg" alt="logo" />
                         <div class="nav-links">
                             <a href="#">Collections</a>
@@ -132,6 +136,12 @@
                                 src="images/image-product-4.jpg"
                                 alt="sneaker4 image"
                             />
+                            <a class="previous" onclick="changeImage('prev')"
+                                >&#10094;</a
+                            >
+                            <a class="next" onclick="changeImage('next')"
+                                >&#10095;</a
+                            >
                         </div>
                         <div class="grid-gallery">
                             <div class="thumb-active">
@@ -139,28 +149,32 @@
                                     src="images/image-product-1-thumbnail.jpg"
                                     alt="sneaker1 image"
                                     class="active"
-                                    onclick="changeImage(event)"
+                                    id="img1"
+                                    onclick="changeImage(1)"
                                 />
                             </div>
                             <div>
                                 <img
                                     src="images/image-product-2-thumbnail.jpg"
                                     alt="sneaker2 image"
-                                    onclick="changeImage(event)"
+                                    id="img2"
+                                    onclick="changeImage(2)"
                                 />
                             </div>
                             <div>
                                 <img
                                     src="images/image-product-3-thumbnail.jpg"
                                     alt="sneaker3 image"
-                                    onclick="changeImage(event)"
+                                    id="img3"
+                                    onclick="changeImage(3)"
                                 />
                             </div>
                             <div>
                                 <img
                                     src="images/image-product-4-thumbnail.jpg"
                                     alt="sneaker4 image"
-                                    onclick="changeImage(event)"
+                                    id="img4"
+                                    onclick="changeImage(4)"
                                 />
                             </div>
                         </div>
@@ -221,32 +235,35 @@
         <div id="dim"></div>
         <div class="light-box" id="light-box">
             <div class="grid-item-left">
-                <a class="close-btn" onclick="closeLightBox()">&times;</a>
-                <div class="main-image-display light-box-main-image">
+                <div class="main-image-display">
+                    <a class="light-box-close-btn" onclick="closeLightBox()"
+                        >&times;</a
+                    >
                     <img
-                        class="main-image"
+                        class="main-image light-box-main-image"
                         src="images/image-product-1.jpg"
                         alt="sneaker1 image"
                     />
                     <img
-                        class="main-image inactive"
+                        class="main-image inactive light-box-main-image"
                         src="images/image-product-2.jpg"
                         alt="sneaker2 image"
                     />
                     <img
-                        class="main-image inactive"
+                        class="main-image inactive light-box-main-image"
                         src="images/image-product-3.jpg"
                         alt="sneaker3 image"
                     />
                     <img
-                        class="main-image inactive"
+                        class="main-image inactive light-box-main-image"
                         src="images/image-product-4.jpg"
                         alt="sneaker4 image"
                     />
+                    <a class="light-box-previous" onclick="previousImg()"
+                        >&#10094;</a
+                    >
+                    <a class="light-box-next" onclick="nextImg()">&#10095;</a>
                 </div>
-
-                <a class="previous" onclick="previousImg()">&#10094;</a>
-                <a class="next" onclick="nextImg()">&#10095;</a>
 
                 <div class="grid-gallery light-box-grid-gallery">
                     <div class="light-box-thumb-active">

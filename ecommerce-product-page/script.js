@@ -17,7 +17,6 @@ function addToCart() {
     const cartEmpty = document.getElementById("cart-empty");
     const cartFull = document.getElementById("cart-full");
 
-    console.log(quantity);
     if (quantity > 0) {
         itemQuantity.textContent = quantity;
         total.textContent = "$" + (Number(quantity) * 125).toFixed(2);
@@ -38,22 +37,24 @@ function deleteItem() {
     spanIcon.classList.add("dont-show");
 }
 
-document.getElementById("icon-cart").addEventListener("mouseover", () => {
+document.getElementById("icon-cart").addEventListener("click", () => {
     const cart = document.getElementById("cart-content");
     cart.classList.remove("dont-show");
 });
 
 document.addEventListener("click", (event) => {
-    const cart = document.getElementById("cart-content");
+    const cartContent = document.getElementById("cart-content");
+    const cart = document.getElementById("icon-cart")
     const isClickInside = cart.contains(event.target);
-
+    
     if (!isClickInside) {
-        // The click was OUTSIDE the cart
-        cart.classList.add("dont-show");
+        cartContent.classList.add("dont-show");
     }
 });
 
-function changeImage(e) {
+let currentId = 1;
+
+function changeImage(index) {
     const thumbs = document
         .getElementsByClassName("grid-gallery")
         .item(0).children;
@@ -61,8 +62,23 @@ function changeImage(e) {
         .getElementsByClassName("main-image-display")
         .item(0).children;
 
+    if (index === "prev") {
+        index = currentId - 1;
+        if (index === 0) {
+            index = thumbs.length;
+        }
+    }
+
+    if (index === "next") {
+        index = currentId + 1;
+        if (index > thumbs.length) {
+            index = 1;
+        }
+    }
+    currentId = index;
+
     for (let i = 0; i < thumbs.length; i++) {
-        if (thumbs[i].children[0] === e.target) {
+        if (thumbs[i].children[0].id === "img" + index) {
             thumbs[i].classList.add("thumb-active");
             thumbs[i].children[0].classList.add("active");
             mainImgs[i].classList.remove("inactive");
@@ -75,8 +91,10 @@ function changeImage(e) {
 }
 
 function openLightBox() {
-    document.getElementById("light-box").style.display = "flex";
-    document.getElementById("dim").classList.add("dim");
+    if (window.innerWidth > 800) {
+        document.getElementById("light-box").style.display = "flex";
+        document.getElementById("dim").classList.add("dim");
+    }
 }
 
 function closeLightBox() {
@@ -88,9 +106,7 @@ function changeImageLightBox(index) {
     const thumbs = document
         .getElementsByClassName("light-box-grid-gallery")
         .item(0).children;
-    const mainImgs = document
-        .getElementsByClassName("light-box-main-image")
-        .item(0).children;
+    const mainImgs = document.getElementsByClassName("light-box-main-image");
 
     for (let i = 0; i < thumbs.length; i++) {
         if (i + 1 === index) {
@@ -106,26 +122,24 @@ function changeImageLightBox(index) {
 }
 
 function previousImg() {
-    [activeImgId, thumbsLenght] = getActiveImgId();
+    let [activeImgId, thumbsLenght] = getActiveImgId();
 
     if (activeImgId - 1 === 0) {
         activeImgId = thumbsLenght;
     } else {
         activeImgId -= 1;
     }
-
     changeImageLightBox(activeImgId);
 }
 
 function nextImg() {
-    [activeImgId, thumbsLenght] = getActiveImgId();
+    let [activeImgId, thumbsLenght] = getActiveImgId();
 
     if (activeImgId + 1 > thumbsLenght) {
         activeImgId = 1;
     } else {
         activeImgId += 1;
     }
-
     changeImageLightBox(activeImgId);
 }
 
