@@ -1,0 +1,155 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  --very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--soft-blue);
+}
+
+body {
+  background-color: var(--very-dark-blue-main-BG);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  gap: 20px;
+}
+
+.card-container {
+  background-color: var(--very-dark-blue-card-BG);
+  border-radius: 15px;
+  width: 350px;
+  padding: 25px;
+}
+
+.images {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container .equilibrium-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.hidden-bg {
+  position: absolute;
+  background-color: var(--cyan);
+  opacity: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.images:hover > .hidden-bg {
+  opacity: 40%;
+}
+
+.icon-view {
+  position: absolute;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.images:hover > .icon-view {
+  opacity: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+h1:hover {
+  color: var(--cyan);
+}
+
+.value-n-time {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.value-n-time img {
+  height: 18px;
+}
+
+.value-n-time p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.eth,
+.time {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.eth .value {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+hr {
+  background-color: var(--very-dark-blue-line);
+  height: 1px;
+  border: 0;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0 10px;
+}
+
+.author img {
+  width: 40px;
+  border: var(--white) 2px solid;
+  border-radius: 50%;
+}
+
+.author a {
+  color: var(--white);
+}
+
+.author a:hover {
+  color: var(--cyan);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  font-size: inherit;
+}

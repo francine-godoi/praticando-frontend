@@ -98,3 +98,10 @@
 <img src="ecommerce-product-page/screenshots/ecommerce-product-page-final-product.jpg"  style="width:800px" >
 
 ---
+
+### NFT preview card component challenge on Frontend Mentor
+
+<img src="nft-preview-card-component/screenshots/nft-preview-card-component-final-product.jpg"  style="width:800px" >
+
+---
+
