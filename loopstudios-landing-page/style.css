@@ -37,18 +37,29 @@ header {
 }
 
 header img {
-  width: 150px;
+  width: 160px;
 }
 
 .nav-links ul {
   list-style: none;
   display: flex;
-  gap: 30px;  
+  gap: 30px;
 }
 
 .nav-links a {
+  position: relative;
   text-decoration: none;
   color: var(--white);
+}
+
+.nav-links a:hover::after {
+  content: "";
+  position: absolute;
+  border-bottom: 3px solid var(--white);
+  height: 3px;
+  width: 50%;
+  bottom: -10px;
+  right: 25%;
 }
 
 .title {
@@ -115,6 +126,12 @@ header img {
   padding: 10px 40px;
 }
 
+.creations-hearder button:hover {
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--black);
+}
+
 .grid-container {
   margin: 0 150px;
   display: grid;
@@ -124,7 +141,7 @@ header img {
   margin-bottom: 150px;
 }
 
-.grid-item {
+.grid-container .grid-item {
   position: relative;
 }
 
@@ -161,6 +178,20 @@ header img {
   width: 50%;
 }
 
+.grid-container .grid-item:hover {
+  cursor: pointer;
+}
+
+.grid-container .grid-item:hover > .dim {
+  background-color: var(--white);
+  background: linear-gradient(0deg, var(--white) 0%, var(--white) 100%);
+  opacity: 0.75;
+}
+
+.grid-container .grid-item:hover > span {
+  color: var(--black);
+}
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -168,25 +199,40 @@ footer {
   padding: 40px 150px;
 }
 
-footer .footer-left, footer .footer-right{
+footer .footer-left,
+footer .footer-right {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-footer .footer-left img{
+footer .footer-left img {
   width: 140px;
 }
 
-footer .footer-right{
+footer .footer-right {
   align-items: end;
 }
 
-footer .footer-right .social-links ul{
+footer .footer-right .social-links ul {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+footer .footer-right .social-links a {
+  position: relative;
+}
+
+footer .footer-right .social-links a:hover::after {
+  content: "";
+  position: absolute;
+  border-bottom: 3px solid var(--white);
+  height: 3px;
+  width: 100%;
+  bottom: -10px;
+  right: 0;
 }
 
 .attribution {
