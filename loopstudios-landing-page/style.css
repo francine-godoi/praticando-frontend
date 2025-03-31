@@ -30,6 +30,7 @@ body {
 }
 
 header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -135,7 +136,8 @@ header img {
   transition: background-color 0.4s ease;
 }
 
-.creations-hearder button:hover, .mobile-see-all-btn:hover {
+.creations-hearder button:hover,
+.mobile-see-all-btn:hover {
   cursor: pointer;
   color: var(--white);
   background-color: var(--black);
@@ -168,7 +170,7 @@ header img {
   background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 0.2) 25%,
+    rgba(0, 0, 0, 0.2) 30%,
     rgba(0, 0, 0, 0) 100%
   );
 }
@@ -202,7 +204,8 @@ header img {
 }
 
 .grid-mobile,
-.mobile-see-all-btn {
+.mobile-see-all-btn,
+.inactive {
   display: none;
 }
 
@@ -321,27 +324,67 @@ footer .footer-right .social-links a:hover::after {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .mobile-menu {
+    background-color: var(--black);
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    padding: 5% 10%;
 
+  }
+  
+  .mobile-menu .nav-links{
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background-color: var(--black);
+    z-index: 10;
+  }
+  
+  .mobile-menu .nav-links ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 30px;
+    margin-top: 25%;
+    text-transform: uppercase;
+  }
+  
+  .mobile-menu li a{
+    font-size: 24px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+  }
+  
   .mobile-menu-icon {
     display: block;
-    width: 30px;
+    width: 25px;
   }
 
-  header .nav-links {
-    display: none;
+  .mobile-menu .close-menu{
+    width: 25px;
   }
+  
+  header .nav-links, .inactive {
+    display: none;
+  }  
+
 }
 
 @media (max-width: 768px) {
-
   .immersive-container h1 {
     width: 100%;
     font-size: 36px;
     margin: 0;
   }
-  
+
   .mobile-see-all-btn {
     display: block;
+    
   }
 
   .creations-hearder button {
@@ -418,6 +461,15 @@ footer .footer-right .social-links a:hover::after {
   }
   .grid-container .grid-item .dim {
     bottom: 0;
+  }
+
+  .grid-container .grid-item .dim {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0) 100%
+    );
   }
 
   footer {
