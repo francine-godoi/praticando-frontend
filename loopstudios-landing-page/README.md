@@ -11,4 +11,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshots/loopstudios-landing-page-final-product.jpg)
+
+![](./screenshots/loopstudios-landing-page-mobile.jpg)
+
+![](./screenshots/loopstudios-landing-page-mobile-menu.jpg)
