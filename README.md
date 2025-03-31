@@ -128,3 +128,10 @@
 <img src="loopstudios-landing-page/screenshots/loopstudios-landing-page-final-product.jpg" style="width:300px" >
 
 ---
+
+### Room homepage challenge on Frontend Mentor
+[See repository](https://github.com/francine-godoi/praticando-frontend/tree/a1704c4183a2abbd2b5c96f6b0b42c005400c09c/room-homepage)
+
+<img src="room-homepage/screenshots/room-homepage-final-product.jpg" style="width:300px" >
+
+---
