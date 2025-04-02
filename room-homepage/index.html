@@ -5,22 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
   
   <title>Frontend Mentor | Room homepage</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-  Home
-  Shop
-  About
-  Contact
+  <header>
+    <img src="images/icon-close.svg" alt="close-menu-icon" class="inactive" onclick="closeMenu()" id="close-menu">
+    <img src="images/icon-hamburger.svg" alt="menu-mobile-icon" class="menu-mobile" id="mobile-menu-icon" onclick="openMenu()">
+    <img src="images/logo.svg" alt="logo" class="logo">
+    <nav class="nav-links" id="nav-links">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  Discover innovative ways to decorate
+  <section id="top">
+    <div>
+      <img src="images/desktop-image-hero-1.jpg" alt="hero1" class="desktop">
+      <img src="images/mobile-image-hero-1.jpg" alt="hero1" class="mobile">
+    </div>
+  </section>
+
+  <!-- Discover innovative ways to decorate
 
   We provide unmatched quality, comfort, and style for property owners across the country. 
   Our experts combine form and function in bringing your vision to life. Create a room in your 
@@ -53,7 +68,8 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="#">Francine G</a>.
+  </div> -->
+  <script src="script.js"></script>
 </body>
 </html>

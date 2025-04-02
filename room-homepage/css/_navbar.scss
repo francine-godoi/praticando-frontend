@@ -1,0 +1,58 @@
+header {
+  display: flex;
+  gap: 60px;
+  padding: 60px;
+  position: absolute;
+}
+
+nav {
+  ul {
+    display: flex;
+    gap: 30px;
+    text-transform: lowercase;
+  }
+}
+
+.menu-mobile, .inactive{
+    display: none;
+}
+
+
+@media screen and (max-width:550px){
+
+    header{
+        gap: 0;
+        padding: 45px 20px;
+        width: 100%;
+
+        &:has(> nav.mobile-nav-links){
+            background-color: $white ;
+            gap: 60px;
+            
+            .logo, .menu-mobile {
+                display: none;
+            }
+        }
+    }
+
+    .logo{
+        margin: 0 auto;
+    }
+    
+    .nav-links, .desktop {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .mobile-nav-links{
+        display: block;
+
+        a{
+            color: $black;
+            font-weight: 600;
+        }
+    }
+}
