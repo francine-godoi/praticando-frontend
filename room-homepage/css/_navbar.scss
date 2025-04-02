@@ -18,55 +18,56 @@ nav {
 }
 
 a:hover::after {
-    border-bottom: 2px solid $white;
-    bottom: -10px;
-    content: "";
-    height: 3px;
-    left: 25%;
-    position: absolute;
-    width: 50%;
+  border-bottom: 2px solid $white;
+  bottom: -10px;
+  content: "";
+  height: 3px;
+  left: 25%;
+  position: absolute;
+  width: 50%;
 }
 
-.menu-mobile, .inactive{
-    display: none;
+.menu-mobile,
+.inactive {
+  display: none;
 }
 
+@media screen and (max-width: 550px) {
+  header {
+    gap: 0;
+    padding: 45px 20px;
+    width: 100%;
 
-@media screen and (max-width:550px){
+    &:has(> nav.mobile-nav-links) {
+      background-color: $white;
+      gap: 60px;
 
-    header{
-        gap: 0;
-        padding: 45px 20px;
-        width: 100%;
-
-        &:has(> nav.mobile-nav-links){
-            background-color: $white ;
-            gap: 60px;
-            
-            .logo, .menu-mobile {
-                display: none;
-            }
-        }
-    }
-
-    .logo{
-        margin: 0 auto;
-    }
-    
-    .nav-links, .desktop {
+      .logo,
+      .menu-mobile {
         display: none;
+      }
     }
+  }
 
-    .menu-mobile {
-        display: block;
+  .logo {
+    margin: 0 auto;
+  }
+
+  .nav-links,
+  .desktop {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+
+  .mobile-nav-links {
+    display: block;
+
+    a {
+      color: $black;
+      font-weight: 600;
     }
-
-    .mobile-nav-links{
-        display: block;
-
-        a{
-            color: $black;
-            font-weight: 600;
-        }
-    }
+  }
 }
