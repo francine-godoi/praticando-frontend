@@ -1,5 +1,6 @@
 @import "variables";
 @import "navbar";
+@import "sections";
 
 * {
   box-sizing: border-box;
@@ -28,6 +29,7 @@ li {
 h1 {
   color: $black;
   font-weight: 700;
+  font-size: 48px;
 }
 
 h2 {
@@ -44,7 +46,7 @@ button {
 }
 
 p {
-  line-height: 180%;
+  line-height: 150%;
 }
 
 .attribution {

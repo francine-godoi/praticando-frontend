@@ -24,7 +24,8 @@ a:hover::after {
   width: 50%;
 }
 
-.menu-mobile, .inactive {
+.menu-mobile,
+.inactive {
   display: none;
 }
 
@@ -38,13 +39,15 @@ a:hover::after {
     background-color: hsl(0, 0%, 100%);
     gap: 60px;
   }
-  header:has(> nav.mobile-nav-links) .logo, header:has(> nav.mobile-nav-links) .menu-mobile {
+  header:has(> nav.mobile-nav-links) .logo,
+  header:has(> nav.mobile-nav-links) .menu-mobile {
     display: none;
   }
   .logo {
     margin: 0 auto;
   }
-  .nav-links, .desktop {
+  .nav-links,
+  .desktop {
     display: none;
   }
   .menu-mobile {
@@ -56,6 +59,91 @@ a:hover::after {
   .mobile-nav-links a {
     color: hsl(0, 0%, 0%);
     font-weight: 600;
+  }
+}
+.mobile {
+  display: none;
+}
+
+.sections {
+  display: flex;
+  gap: 7%;
+}
+
+.images {
+  flex: 2;
+}
+.images img {
+  width: 100%;
+}
+
+.info-right {
+  flex: 1;
+  margin: auto;
+  padding: 0 10px;
+  width: 100%;
+  height: 100%;
+}
+.info-right h1,
+.info-right p,
+.info-right .shop-now {
+  width: 430px;
+}
+.info-right p {
+  margin: 30px 0;
+}
+.info-right h2 {
+  letter-spacing: 13px;
+}
+
+.shop-now {
+  display: flex;
+  gap: 20px;
+}
+.shop-now svg path {
+  stroke: hsl(0, 0%, 0%);
+}
+
+.shop-now:hover {
+  cursor: pointer;
+}
+.shop-now:hover h2 {
+  color: hsl(0, 0%, 63%);
+}
+.shop-now:hover svg path {
+  stroke: hsl(0, 0%, 63%);
+}
+
+@media screen and (max-width: 1024px) {
+  .sections {
+    flex-direction: column;
+  }
+  .info-right {
+    margin: 60px 0;
+  }
+  .info-right h1,
+  .info-right p,
+  .info-right .shop-now {
+    margin: 0 auto;
+  }
+  .info-right p {
+    margin: 20px auto 40px;
+  }
+}
+@media screen and (max-width: 550px) {
+  body {
+    min-width: 100%;
+  }
+  .mobile {
+    display: block;
+  }
+  h1,
+  p,
+  .shop-now {
+    width: 326px;
+  }
+  h1 {
+    font-size: 32px;
   }
 }
 * {
@@ -85,6 +173,7 @@ li {
 h1 {
   color: hsl(0, 0%, 0%);
   font-weight: 700;
+  font-size: 48px;
 }
 
 h2 {
@@ -101,7 +190,7 @@ button {
 }
 
 p {
-  line-height: 180%;
+  line-height: 150%;
 }
 
 .attribution {

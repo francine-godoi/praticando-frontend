@@ -1,47 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-  
-  <title>Frontend Mentor | Room homepage</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
 
-</head>
-<body>
-  <header>
-    <img src="images/icon-close.svg" alt="close-menu-icon" class="inactive" onclick="closeMenu()" id="close-menu">
-    <img src="images/icon-hamburger.svg" alt="menu-mobile-icon" class="menu-mobile" id="mobile-menu-icon" onclick="openMenu()">
-    <img src="images/logo.svg" alt="logo" class="logo">
-    <nav class="nav-links" id="nav-links">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <title>Frontend Mentor | Room homepage</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="images/icon-close.svg"
+        alt="close-menu-icon"
+        class="inactive"
+        onclick="closeMenu()"
+        id="close-menu"
+      />
+      <img
+        src="images/icon-hamburger.svg"
+        alt="menu-mobile-icon"
+        class="menu-mobile"
+        id="mobile-menu-icon"
+        onclick="openMenu()"
+      />
+      <img src="images/logo.svg" alt="logo" class="logo" />
+      <nav class="nav-links" id="nav-links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <section id="top">
-    <div>
-      <img src="images/desktop-image-hero-1.jpg" alt="hero1" class="desktop">
-      <img src="images/mobile-image-hero-1.jpg" alt="hero1" class="mobile">
-    </div>
-  </section>
+    <section id="top">
+      <div class="sections">
+        <div class="images">
+          <img
+            src="images/desktop-image-hero-1.jpg"
+            alt="hero1"
+            class="desktop"
+          />
+          <img
+            src="images/mobile-image-hero-1.jpg"
+            alt="hero1"
+            class="mobile"
+          />
+        </div>
+        <div class="info-right">
+          <h1>Discover innovative ways to decorate</h1>
+          <p>
+            We provide unmatched quality, comfort, and style for property owners
+            across the country. Our experts combine form and function in
+            bringing your vision to life. Create a room in your own style with
+            our collection and make your property a reflection of you and what
+            you love.
+          </p>
 
-  <!-- Discover innovative ways to decorate
+          <div class="shop-now">
+            <h2>Shop now</h2>
+            <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                stroke="currentColor"
+                fill="currentColor"
+                fill-rule="nonzero"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  We provide unmatched quality, comfort, and style for property owners across the country. 
-  Our experts combine form and function in bringing your vision to life. Create a room in your 
-  own style with our collection and make your property a reflection of you and what you love.
-
-  Shop now
+    <!-- 
 
   We are available all across the globe
 
@@ -70,6 +116,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Francine G</a>.
   </div> -->
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
