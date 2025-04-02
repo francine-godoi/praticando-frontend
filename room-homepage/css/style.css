@@ -10,6 +10,19 @@ nav ul {
   gap: 30px;
   text-transform: lowercase;
 }
+nav a {
+  position: relative;
+}
+
+a:hover::after {
+  border-bottom: 2px solid hsl(0, 0%, 100%);
+  bottom: -10px;
+  content: "";
+  height: 3px;
+  left: 25%;
+  position: absolute;
+  width: 50%;
+}
 
 .menu-mobile, .inactive {
   display: none;
