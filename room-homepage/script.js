@@ -45,3 +45,12 @@ function changeSlide(direction){
 
 }
 
+
+document.onkeydown = function(e) {
+  if (e.code == 'ArrowLeft'){
+    changeSlide("prev");
+  } else if (e.code == 'ArrowRight'){
+    changeSlide("next");   
+  }
+
+}
