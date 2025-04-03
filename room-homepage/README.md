@@ -12,4 +12,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshots/room-homepage-final-product.jpg)
+
+![](./screenshots/room-homepage-slide-2.jpg)
+
+![](./screenshots/room-homepage-slide-3.jpg)
+
+![](./screenshots/room-homepage-mobile.jpg)
+
+![](./screenshots/room-homepage-mobile-menu.jpg)

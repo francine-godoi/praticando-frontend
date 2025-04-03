@@ -92,7 +92,7 @@ a:hover::after {
 .info-right h1,
 .info-right p,
 .info-right .shop-now {
-  width: 423px;
+  width: 421px;
 }
 .info-right p {
   margin: 30px 0;
@@ -130,6 +130,7 @@ a:hover::after {
 
 button:hover {
   background-color: hsl(0, 0%, 27%);
+  cursor: pointer;
 }
 
 .about {
@@ -148,7 +149,7 @@ button:hover {
   align-items: center;
   gap: 15px;
   justify-content: center;
-  padding: 20px 4%;
+  padding: 20px 4.2%;
 }
 .about p,
 .about h2 {
@@ -177,6 +178,9 @@ button:hover {
   .info-right {
     margin: 60px 0;
   }
+  .info-right .info {
+    min-height: 301px;
+  }
   .info-right h1 {
     font-size: 32px;
   }
@@ -186,7 +190,7 @@ button:hover {
   .info-right h1,
   .info-right p,
   .info-right .shop-now {
-    width: 330px;
+    width: 326px;
   }
   .buttons {
     right: 0;
@@ -270,4 +274,5 @@ p {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+  font-size: inherit;
 }/*# sourceMappingURL=style.css.map */
