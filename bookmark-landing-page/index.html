@@ -1,27 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Bookmark landing page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Bookmark landing page</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav-icons">
+        <img src="images/logo-bookmark.svg" alt="logo" id="logo" />
+        <img
+          src="images/icon-close.svg"
+          alt="mobile menu icon"
+          class="inactive"
+          id="close-menu"
+          onclick="closeMenu()"
+        />
+      </div>
+      <nav class="nav-links" id="nav-links">
+        <ul>
+          <hr class="mobile" />
+          <li><a href="#">Features</a></li>
+          <hr class="mobile" />
+          <li><a href="#">Pricing</a></li>
+          <hr class="mobile" />
+          <li><a href="#">Contact</a></li>
+          <hr class="mobile" />
+          <li><a href="#" class="login">Login</a></li>
+        </ul>
+      </nav>
+      <img
+        src="images/icon-hamburger.svg"
+        alt="mobile menu icon"
+        class="mobile"
+        id="open-menu"
+        onclick="openMenu()"
+      />
+      <div class="nav-social-media-icons">
+        <img src="images/icon-facebook.svg" alt="facebook icon" />
+        <img src="images/icon-twitter.svg" alt="twitter icon" />
+      </div>
+    </header>
 
-  Features
-  Pricing
-  Contact
-  Login
-
-  A Simple Bookmark Manager
+    <!-- A Simple Bookmark Manager
 
   A clean and simple interface to organize your favourite websites. Open a new 
   browser tab and see your sites load instantly. Try it for free.
@@ -79,37 +116,37 @@
   Frequently Asked Questions
   
   Here are some of our FAQs. If you have any other questions you’d like 
-  answered please feel free to email us.
+  answered please feel free to email us. -->
 
-  <!-- Question 1 -->
-  What is Bookmark?
+    <!-- Question 1 -->
+    <!-- What is Bookmark? -->
 
-  <!-- Answer 1 -->
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
-  justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+    <!-- Answer 1 -->
+    <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+  justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis. -->
 
-  <!-- Question 2 -->
-  How can I request a new browser?
+    <!-- Question 2 -->
+    <!-- How can I request a new browser? -->
 
-  <!-- Answer 2 -->
-  Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+    <!-- Answer 2 -->
+    <!-- Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
   Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
   ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
-  Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+  Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. -->
 
-  <!-- Question 3 -->
-  Is there a mobile app?
+    <!-- Question 3 -->
+    <!-- Is there a mobile app? -->
 
-  <!-- Answer 3 -->
-  Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+    <!-- Answer 3 -->
+    <!-- Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
   urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
-  sollicitudin ex et ultricies bibendum.
+  sollicitudin ex et ultricies bibendum. -->
 
-  <!-- Question 4 -->
-  What about other Chromium browsers?
+    <!-- Question 4 -->
+    <!-- What about other Chromium browsers? -->
 
-  <!-- Answer 4 -->
-  Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+    <!-- Answer 4 -->
+    <!-- Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
   vitae neque eget nisl gravida pellentesque non ut velit.
 
   More Info
@@ -129,6 +166,7 @@
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Your Name Here</a>.
     </p>
-  </footer>
-</body>
+  </footer> -->
+  </body>
+  <script src="script.js"></script>
 </html>

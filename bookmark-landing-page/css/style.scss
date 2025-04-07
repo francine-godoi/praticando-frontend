@@ -1,0 +1,39 @@
+@import "variables";
+@import "navbar";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: $blue-950;
+}
+
+body {
+  width: 100%;
+  min-height: 100dvh;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+    background-color: $grey-50;
+    height: 1px;
+    border: 0;
+    width: 100%;
+    opacity: .2;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  font-size: inherit;
+}
