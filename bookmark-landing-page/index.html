@@ -22,49 +22,65 @@
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
   <body>
-    <header>
-      <div class="nav-icons">
-        <img src="images/logo-bookmark.svg" alt="logo" id="logo" />
+    <div class="container">
+      <header>
+        <div class="nav-icons">
+          <img src="images/logo-bookmark.svg" alt="logo" id="logo" />
+          <img
+            src="images/icon-close.svg"
+            alt="mobile menu icon"
+            class="inactive"
+            id="close-menu"
+            onclick="closeMenu()"
+          />
+        </div>
+        <nav class="nav-links" id="nav-links">
+          <ul>
+            <hr class="mobile" />
+            <li><a href="#">Features</a></li>
+            <hr class="mobile" />
+            <li><a href="#">Pricing</a></li>
+            <hr class="mobile" />
+            <li><a href="#">Contact</a></li>
+            <hr class="mobile" />
+            <li><a href="#" class="login">Login</a></li>
+          </ul>
+        </nav>
         <img
-          src="images/icon-close.svg"
+          src="images/icon-hamburger.svg"
           alt="mobile menu icon"
-          class="inactive"
-          id="close-menu"
-          onclick="closeMenu()"
+          class="mobile"
+          id="open-menu"
+          onclick="openMenu()"
         />
-      </div>
-      <nav class="nav-links" id="nav-links">
-        <ul>
-          <hr class="mobile" />
-          <li><a href="#">Features</a></li>
-          <hr class="mobile" />
-          <li><a href="#">Pricing</a></li>
-          <hr class="mobile" />
-          <li><a href="#">Contact</a></li>
-          <hr class="mobile" />
-          <li><a href="#" class="login">Login</a></li>
-        </ul>
-      </nav>
-      <img
-        src="images/icon-hamburger.svg"
-        alt="mobile menu icon"
-        class="mobile"
-        id="open-menu"
-        onclick="openMenu()"
-      />
-      <div class="nav-social-media-icons">
-        <img src="images/icon-facebook.svg" alt="facebook icon" />
-        <img src="images/icon-twitter.svg" alt="twitter icon" />
-      </div>
-    </header>
+        <div class="nav-social-media-icons">
+          <img src="images/icon-facebook.svg" alt="facebook icon" />
+          <img src="images/icon-twitter.svg" alt="twitter icon" />
+        </div>
+      </header>
+      <main>
+        <div class="hero-info">
+          <h1>A Simple Bookmark Manager</h1>
+          <p>
+            A clean and simple interface to organize your favourite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
+          <div class="buttons">
+            <button>Get it on Chrome</button>
+            <button class="btn-gray">Get it on Firefox</button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="images/illustration-hero.svg" alt="illustration-hero" />
+        </div>
+      </main>
+    </div>
 
-    <!-- A Simple Bookmark Manager
+    <!-- 
 
-  A clean and simple interface to organize your favourite websites. Open a new 
-  browser tab and see your sites load instantly. Try it for free.
-
-  Get it on Chrome
-  Get it on Firefox
+    TODO: FIX MOBILE NAVBAR HEIGHT FOR LANDSCAPE MODE
+    TODO: FIX MOBILE NAVBAR BACKGROUND OPACITY/TRANSPARENCY
 
   Features
 
