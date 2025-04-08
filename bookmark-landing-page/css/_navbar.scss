@@ -57,13 +57,16 @@ header {
   }
 
   .mobile-menu {
+    position: absolute;
+    width: 100%;
+    height: 100dvh;
+    z-index: 50;
+    background-color: $blue-950;
+    opacity: .95;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100dvh;
-    margin: 0;
-    background-color: hsla(229, 31%, 21%);
-    opacity: 0.9;
+    margin: 0;   
     padding: 40px;
   }
 
