@@ -90,11 +90,11 @@
 
           <div class="features-tabs">
             <hr class="mobile" />
-            <button class="tab active" id="tab-1">Simple Bookmarking</button>
+            <button class="tab active" id="tab-1" onclick="changeTab(1)">Simple Bookmarking</button>
             <hr class="mobile" />
-            <button class="tab" id="tab-2">Speedy Searching</button>
+            <button class="tab" id="tab-2" onclick="changeTab(2)">Speedy Searching</button>
             <hr class="mobile" />
-            <button class="tab" id="tab-3">Easy Sharing</button>
+            <button class="tab" id="tab-3" onclick="changeTab(3)">Easy Sharing</button>
             <hr />
           </div>
 
@@ -104,31 +104,51 @@
                 src="images/illustration-features-tab-1.svg"
                 alt="illustration-features-tab-1"
                 id="img-1"
-             
               />
               <img
-              src="images/illustration-features-tab-2.svg"
-              alt="illustration-features-tab-2"
-              id="img-2"
-              class="inactive"
-            />
-            <img
-            src="images/illustration-features-tab-3.svg"
-            alt="illustration-features-tab-3"
-            id="img-3"
-            class="inactive"
-          />
+                src="images/illustration-features-tab-2.svg"
+                alt="illustration-features-tab-2"
+                id="img-2"
+                class="inactive"
+              />
+              <img
+                src="images/illustration-features-tab-3.svg"
+                alt="illustration-features-tab-3"
+                id="img-3"
+                class="inactive"
+              />
             </div>
             <div class="features-details-info">
-              <h2>Bookmark in one click</h2>
+              <div id="info-1" class="inactive">
+                <h2>Bookmark in one click</h2>
+                <p>
+                  Organize your bookmarks however you like. Our simple
+                  drag-and-drop interface gives you complete control over how
+                  you manage your favourite sites.
+                </p>
+                <button class="more-info">More Info</button>
+              </div>
+              <div id="info-2" class="inactive">
+                <h2>Intelligent search</h2>
 
-              <p>
-                Organize your bookmarks however you like. Our simple
-                drag-and-drop interface gives you complete control over how you
-                manage your favourite sites.
-              </p>
+                <p>
+                  Our powerful search feature will help you find saved sites in
+                  no time at all. No need to trawl through all of your
+                  bookmarks.
+                </p>
 
-              <button class="more-info">More Info</button>
+                <button class="more-info">More Info</button>
+              </div>
+              <div id="info-3">
+                <h2>Share your bookmarks</h2>
+
+                <p>
+                  Easily share your bookmarks and collections with others.
+                  Create a shareable link that you can send at the click of a
+                  button.
+                </p>
+                <button class="more-info">More Info</button>
+              </div>
             </div>
           </div>
         </div>
@@ -137,19 +157,6 @@
 
     <!-- 
 
-  Intelligent search
-
-  Our powerful search feature will help you find saved sites in no time at all. 
-  No need to trawl through all of your bookmarks.
-
-  More Info
-
-  Share your bookmarks
-
-  Easily share your bookmarks and collections with others. Create a shareable 
-  link that you can send at the click of a button.
-
-  More Info
 
   Download the extension
 
