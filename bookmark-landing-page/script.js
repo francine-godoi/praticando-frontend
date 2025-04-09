@@ -13,23 +13,31 @@ function closeMenu() {
 }
 
 function changeTab(index) {
-    const tabs = document.getElementsByClassName('tab')
-    const images = document.getElementsByClassName('features-image')
-    const info = document.getElementsByClassName('features-details-info')
+  const tabs = document.getElementsByClassName("tab");
+  const images = document.getElementsByClassName("features-image");
+  const info = document.getElementsByClassName("features-details-info");
 
-    console.log(images[0])
+  console.log(images[0]);
 
-    for (let i = 0; i < tabs.length; i++){
-        if (tabs[i].id === 'tab-'+index){
-            tabs[i].classList.add('active')
-            images[0].children[i].classList.remove('inactive')
-            info[0].children[i].classList.remove('inactive')
-        }else{
-            tabs[i].classList.remove('active')
-            images[0].children[i].classList.add('inactive')
-            info[0].children[i].classList.add('inactive')
-        }
+  for (let i = 0; i < tabs.length; i++) {
+    if (tabs[i].id === "tab-" + index) {
+      tabs[i].classList.add("active");
+      images[0].children[i].classList.remove("inactive");
+      info[0].children[i].classList.remove("inactive");
+    } else {
+      tabs[i].classList.remove("active");
+      images[0].children[i].classList.add("inactive");
+      info[0].children[i].classList.add("inactive");
     }
-    
+  }
+}
 
+question = document.getElementsByClassName("question-info");
+
+for (let i = 0; i < question.length; i++) {
+  question[i].addEventListener("click", () => {
+    question[i].nextElementSibling.classList.toggle("active");
+    question[i].children[1].classList.toggle('open-answer')
+    question[i].children[1].classList.toggle('closed-answer')
+  });
 }

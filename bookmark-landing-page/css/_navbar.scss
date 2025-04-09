@@ -62,11 +62,11 @@ header {
     height: 100dvh;
     z-index: 50;
     background-color: $blue-950;
-    opacity: .95;
+    opacity: 0.95;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0;   
+    margin: 0;
     padding: 40px;
   }
 
@@ -123,5 +123,9 @@ header {
     align-items: center;
     cursor: pointer;
     margin-top: 20px;
+  }
+
+  .mobile-menu hr {
+    background-color: $grey-50;
   }
 }
