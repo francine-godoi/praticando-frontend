@@ -137,7 +137,7 @@
 ---
 
 ### Bookmark landing page challenge on Frontend Mentor
-[See repository](https://github.com/francine-godoi/praticando-frontend/tree/9ee27f3fb19803241f95494d6b12f183f3ca41f5/room-homepage)
+[See repository](https://github.com/francine-godoi/praticando-frontend/tree/69eb7b80329946ea64247e8c6e2ea2a652e8635f/bookmark-landing-page)
 
 <img src="bookmark-landing-page/screenshots/bookmark-landing-page-final-product.jpg" style="width:300px" >
 
