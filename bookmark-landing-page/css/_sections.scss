@@ -390,7 +390,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 15%;
+  margin: 15% 0 10%;
 
   .faq-info {
     margin-bottom: 20px;
@@ -513,3 +513,117 @@ main {
 // End FAQ section
 
 // ---------------------
+
+// Start Bottom section
+.contact-form {
+  text-align: center;
+
+  p {
+    text-transform: uppercase;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 5px;
+  }
+
+  h4 {
+    width: 520px;
+    color: white;
+    font-weight: 500;
+    font-size: 40px;
+    margin: 40px 0;
+  }
+
+  .inputs {
+    display: flex;
+    gap: 15px;
+
+    input[type="text"] {
+      padding: 5px 20px;
+      border-radius: 5px;
+      height: 100%;
+      width: 350px;
+      border: transparent 3px solid;
+      outline: none;
+
+      &::placeholder {
+        color: $light-grey-p;
+        font-size: 16px;
+      }
+    }
+
+    .email {
+      position: relative;      
+    }
+
+    .error {
+      display: none;
+      background-color: $red-400;
+      color: white;
+      font-size: 11px;
+      font-style: italic;
+      text-align: start;
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      width: 100%;
+      padding: 10px 15px;
+      border-radius: 0 0 5px 5px;
+    }
+
+    .email-error{
+      border: $red-400 3px solid !important;
+      background: url(../images/icon-error.svg) no-repeat 310px 13px white;
+    }
+
+    .contact-us-btn {
+      background-color: $red-400;
+    }
+
+    .contact-us-btn:hover {
+      background-color: white;
+      border: $red-400 3px solid;
+      color: $red-400;
+    }
+  }
+}
+
+@media (max-width:600px){
+  .contact-form{
+    width: 375px;
+    padding: 0 30px;
+
+    p{
+      margin: 0;
+      font-size: 12px;
+    }
+    
+  h4 {
+    width: 100%;
+    font-size: 24px;
+    margin: 10px 0 30px;
+  }
+
+  .inputs {
+    flex-direction: column;
+    gap: 20px;
+
+    input[type="text"] {
+      width: 100%;
+      padding: 15px 20px;
+    }
+
+    .error {
+      bottom: 0px;
+    }
+  
+    .email-error {
+      background: url(../images/icon-error.svg) no-repeat 275px 13px white;
+      margin-bottom: 30px;
+    }
+  }
+
+
+}
+}
+
+// End Bottom section

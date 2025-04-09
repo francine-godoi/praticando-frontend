@@ -37,7 +37,25 @@ question = document.getElementsByClassName("question-info");
 for (let i = 0; i < question.length; i++) {
   question[i].addEventListener("click", () => {
     question[i].nextElementSibling.classList.toggle("active");
-    question[i].children[1].classList.toggle('open-answer')
-    question[i].children[1].classList.toggle('closed-answer')
+    question[i].children[1].classList.toggle('open-answer');
+    question[i].children[1].classList.toggle('closed-answer');
   });
+}
+
+function checkEmail() {
+  email = document.getElementById('email');
+  if (validateEmail(email.value) == null) {
+    document.getElementById('error').style.display = 'block'
+    email.classList.add('email-error')
+  } else {
+    document.getElementById('error').style.display = 'none'
+    email.classList.remove('email-error')
+    email.value = ''
+  }
+}
+
+function validateEmail(email) {
+  return email.match(
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
 }
