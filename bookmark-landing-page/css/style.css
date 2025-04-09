@@ -517,17 +517,6 @@ main .hero-image::after {
     font-size: 16px;
   }
 }
-.bottom-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: hsl(231, 69%, 60%);
-  width: 100%;
-  min-width: 100dvh;
-  height: 420px;
-}
-
 .contact-form {
   text-align: center;
 }
@@ -765,6 +754,17 @@ button:hover {
   border: hsl(231, 69%, 60%) 3px solid;
   color: hsl(231, 69%, 60%);
   cursor: pointer;
+}
+
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(231, 69%, 60%);
+  width: 100%;
+  min-width: 100dvh;
+  height: 420px;
 }
 
 .attribution {
