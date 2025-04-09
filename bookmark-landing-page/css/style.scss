@@ -42,8 +42,13 @@ h1 {
 }
 
 h2 {
-  font-size: 28px;
   font-weight: 500;
+  font-size: 28px;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 24px;
 }
 
 p {
@@ -63,6 +68,13 @@ button {
   box-shadow: 0px 3px 10px 0px rgba(154, 154, 162, 0.4);
   -webkit-box-shadow: 0px 3px 10px 0px rgba(154, 154, 162, 0.4);
   -moz-box-shadow: 0px 3px 10px 0px rgba(154, 154, 162, 0.4);
+}
+
+button:hover {
+  background-color: white;
+  border: $blue-600 3px solid;
+  color: $blue-600;
+  cursor: pointer;
 }
 
 .attribution {

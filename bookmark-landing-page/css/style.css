@@ -22,7 +22,7 @@ header .login {
   color: white;
   font-weight: 500;
   padding: 10px 35px;
-  border: transparent 2px solid;
+  border: transparent 3px solid;
   border-radius: 5px;
   box-shadow: 0px 3px 10px 0px rgba(154, 154, 162, 0.4);
   -webkit-box-shadow: 0px 3px 10px 0px rgba(154, 154, 162, 0.4);
@@ -30,7 +30,7 @@ header .login {
 }
 header .login:hover {
   background-color: white;
-  border: hsl(0, 94%, 66%) 2px solid;
+  border: hsl(0, 94%, 66%) 3px solid;
 }
 header .mobile,
 header .inactive,
@@ -121,11 +121,6 @@ main .hero-info {
 main .hero-info .buttons {
   display: flex;
   gap: 20px;
-}
-main .hero-info .buttons button:hover {
-  background-color: white;
-  border: hsl(231, 69%, 60%) 3px solid;
-  color: hsl(231, 69%, 60%);
 }
 main .hero-info .buttons .btn-gray {
   background-color: hsl(0, 0%, 97%);
@@ -346,6 +341,78 @@ main .hero-image::after {
     font-size: 24px;
   }
 }
+.download-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20%;
+}
+.download-container .download-info {
+  margin-bottom: 20px;
+}
+.download-container .download-info p {
+  width: 535px;
+}
+.download-container .download-cards-container {
+  display: flex;
+  gap: 40px;
+  height: 450px;
+}
+.download-container #card-2 {
+  align-self: center;
+}
+.download-container #card-3 {
+  align-self: end;
+}
+.download-container .download-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 360px;
+  gap: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 20px 30px -15px rgba(154, 154, 162, 0.75);
+  -webkit-box-shadow: 0px 20px 30px -15px rgba(154, 154, 162, 0.75);
+  -moz-box-shadow: 0px 20px 30px -15px rgba(154, 154, 162, 0.75);
+}
+.download-container .download-card p {
+  margin: 0 0 10px;
+}
+.download-container .download-card img {
+  margin: 15px 0;
+}
+.download-container .download-card button {
+  padding: 15px 35px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 900px) {
+  .download-container {
+    margin-top: 60%;
+  }
+  .download-container .download-info {
+    margin-bottom: 30px;
+  }
+  .download-container .download-info h2 {
+    font-size: 24px;
+  }
+  .download-container .download-info p {
+    width: 330px;
+    font-size: 16px;
+  }
+  .download-container .download-cards-container {
+    flex-direction: column;
+    gap: 80px;
+  }
+  .download-container .download-cards-container h3 {
+    font-size: 20px;
+  }
+  .download-container .download-cards-container p {
+    font-size: 16px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -386,14 +453,19 @@ h1 {
 }
 
 h2 {
-  font-size: 28px;
   font-weight: 500;
+  font-size: 28px;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 24px;
 }
 
 p {
   line-height: 30px;
   margin: 20px 0 30px;
-  color: hsl(240, 4%, 62%);
+  color: rgb(154, 154, 162);
 }
 
 button {
@@ -407,6 +479,13 @@ button {
   box-shadow: 0px 3px 10px 0px rgba(154, 154, 162, 0.4);
   -webkit-box-shadow: 0px 3px 10px 0px rgba(154, 154, 162, 0.4);
   -moz-box-shadow: 0px 3px 10px 0px rgba(154, 154, 162, 0.4);
+}
+
+button:hover {
+  background-color: white;
+  border: hsl(231, 69%, 60%) 3px solid;
+  color: hsl(231, 69%, 60%);
+  cursor: pointer;
 }
 
 .attribution {
