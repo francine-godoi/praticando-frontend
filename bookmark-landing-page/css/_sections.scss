@@ -473,7 +473,7 @@ main {
 
 @media (max-width: 650px) {
   .faq-container {
-    margin: 150px 0;
+    margin: 150px 0 80px;
 
     .faq-info {
       margin-bottom: 30px;
@@ -515,6 +515,17 @@ main {
 // ---------------------
 
 // Start Bottom section
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $blue-600;
+  width: 100%;
+  min-width: 100dvh;
+  height: 420px;
+}
+
 .contact-form {
   text-align: center;
 
@@ -552,7 +563,7 @@ main {
     }
 
     .email {
-      position: relative;      
+      position: relative;
     }
 
     .error {
@@ -570,7 +581,7 @@ main {
       border-radius: 0 0 5px 5px;
     }
 
-    .email-error{
+    .email-error {
       border: $red-400 3px solid !important;
       background: url(../images/icon-error.svg) no-repeat 310px 13px white;
     }
@@ -587,43 +598,45 @@ main {
   }
 }
 
-@media (max-width:600px){
-  .contact-form{
+@media (max-width: 600px) {
+  .bottom-container {
+    height: 100%;
+  }
+
+  .contact-form {
+    margin: 50px 0 40px;
     width: 375px;
     padding: 0 30px;
 
-    p{
+    p {
       margin: 0;
       font-size: 12px;
     }
-    
-  h4 {
-    width: 100%;
-    font-size: 24px;
-    margin: 10px 0 30px;
-  }
 
-  .inputs {
-    flex-direction: column;
-    gap: 20px;
-
-    input[type="text"] {
+    h4 {
       width: 100%;
-      padding: 15px 20px;
+      font-size: 24px;
+      margin: 10px 0 30px;
     }
 
-    .error {
-      bottom: 0px;
-    }
-  
-    .email-error {
-      background: url(../images/icon-error.svg) no-repeat 275px 13px white;
-      margin-bottom: 30px;
+    .inputs {
+      flex-direction: column;
+      gap: 20px;
+
+      input[type="text"] {
+        width: 100%;
+        padding: 15px 20px;
+      }
+
+      .error {
+        bottom: 0px;
+      }
+
+      .email-error {
+        background: url(../images/icon-error.svg) no-repeat 275px 13px white;
+        margin-bottom: 30px;
+      }
     }
   }
-
-
 }
-}
-
 // End Bottom section
