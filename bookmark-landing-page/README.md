@@ -14,4 +14,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshots/bookmark-landing-page-final-product.jpg)
+
+![](./screenshots/bookmark-landing-page-desktop-open-faq.jpg)
+
+![](./screenshots/bookmark-landing-page-mobile.jpg)
+
+![](./screenshots/bookmark-landing-page-mobile-active-menu.jpg)
+
+![](./screenshots/bookmark-landing-page-mobile-email-error.jpg)
